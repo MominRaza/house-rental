@@ -1,13 +1,15 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
+
 class Header extends Component {
   state = {};
   render() {
     return (
       <header>
         <nav className="appbar">
-          <div className="leading">
+          <Link to="/" className="leading">
             <img src="./images/logo.png" alt="House Rental" className="logo" />
-          </div>
+          </Link>
           <div className="trailing">
             <a href="#" className="btn secondary sm">
               List Property
@@ -19,7 +21,11 @@ class Header extends Component {
             <a href="#" className="btn btn-t secondary sm">
               News
             </a>
-            <a href="#" className="btn btn-t secondary sm icon-l">
+            <a
+              href="#"
+              className="btn btn-t secondary sm icon-l"
+              onClick={this.props.onLoginToggle}
+            >
               <i className="material-icons md-18">person_outline</i>
               Login
             </a>
