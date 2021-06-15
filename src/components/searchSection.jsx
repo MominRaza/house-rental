@@ -4,14 +4,14 @@ class SearchSection extends Component {
   state = {};
   render() {
     return (
-      <section class="home center">
-        <h1 class="h3">Properties to buy in Lucknow</h1>
-        <h2 class="h5">Yahan Search Khatam Karo</h2>
-        <div class="card bg-dark">
-          <div class="tab">
-            <div class="tab-item selected">BUY</div>
-            <div class="tab-item">RENT</div>
-            <div class="tab-item">PLOTS</div>
+      <section className="home center">
+        <h1 className="h3">Properties to buy in Lucknow</h1>
+        <h2 className="h5">Yahan Search Khatam Karo</h2>
+        <div className="card bg-dark">
+          <div className="tab">
+            <div className="tab-item selected">BUY</div>
+            <div className="tab-item">RENT</div>
+            <div className="tab-item">PLOTS</div>
           </div>
           <form action="#">
             <select name="location" id="location">
@@ -30,8 +30,8 @@ class SearchSection extends Component {
               id="search"
               placeholder="Search for locality, landmark, project, or builder"
             />
-            <button type="submit" class="btn primary lg icon-l">
-              <i class="material-icons">search</i>
+            <button type="submit" className="btn primary lg icon-l">
+              <i className="material-icons">search</i>
               Search
             </button>
           </form>
