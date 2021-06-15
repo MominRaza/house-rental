@@ -9,7 +9,9 @@ class Footer extends Component {
     return (
       <footer className="footer grid grid-4">
         <div className="grid-item">
-          <img src={logo} alt="House Rental" className="logo" />
+          <Link to="/">
+            <img src={logo} alt="House Rental" className="logo" />
+          </Link>
           <p className="b2 copy">&copy; 2012-21 Locon Solutions Pvt. Ltd.</p>
         </div>
         <div className="grid-item">

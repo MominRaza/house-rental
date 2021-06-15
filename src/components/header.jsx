@@ -38,9 +38,6 @@ class Header extends Component {
                     <i className="material-icons md-18">person_outline</i>
                     Login
                   </Link>
-                  <Link to="#" className="btn btn-t secondary sm icon-o">
-                    <i className="material-icons md-18">menu</i>
-                  </Link>
                 </div>
               </nav>
             </header>
