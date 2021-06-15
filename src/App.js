@@ -4,8 +4,15 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Header from "./components/header";
 import Home from "./screens/home";
 import Register from "./screens/register";
+import LoginScreen from "./screens/loginScreen";
 import Footer from "./components/footer";
 import Login from "./components/login";
+import PageNotFound from "./screens/pageNotFound";
+import About from "./screens/about";
+import Contact from "./screens/contact";
+import News from "./screens/news";
+import Privacy from "./screens/privacy";
+import Terms from "./screens/terms";
 
 class App extends Component {
   state = {
@@ -22,8 +29,29 @@ class App extends Component {
           <Route exact path="/">
             <Home />
           </Route>
+          <Route path="/login">
+            <LoginScreen />
+          </Route>
           <Route path="/register">
             <Register />
+          </Route>
+          <Route path="/about-us">
+            <About />
+          </Route>
+          <Route path="/contact-us">
+            <Contact />
+          </Route>
+          <Route path="/news-and-articles">
+            <News />
+          </Route>
+          <Route path="/privacy-policy">
+            <Privacy />
+          </Route>
+          <Route path="/terms-and-conditions">
+            <Terms />
+          </Route>
+          <Route path="*">
+            <PageNotFound />
           </Route>
         </Switch>
         <Footer />

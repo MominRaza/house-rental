@@ -16,22 +16,22 @@ class Footer extends Component {
           <p className="s1">COMPANY</p>
           <ul>
             <li>
-              <Link to="#" className="b2">
+              <Link to="/about-us" className="b2">
                 About Us
               </Link>
             </li>
             <li>
-              <Link to="#" className="b2">
+              <Link to="/terms-and-conditions" className="b2">
                 Terms
               </Link>
             </li>
             <li>
-              <Link to="#" className="b2">
+              <Link to="/privacy-policy" className="b2">
                 Privacy Policy
               </Link>
             </li>
             <li>
-              <Link to="#" className="b2">
+              <Link to="contact-us" className="b2">
                 Contact Us
               </Link>
             </li>
@@ -41,7 +41,7 @@ class Footer extends Component {
           <p className="s1">EXPLORE</p>
           <ul>
             <li>
-              <Link to="#" className="b2">
+              <Link to="/news-and-articles" className="b2">
                 News
               </Link>
             </li>

@@ -18,20 +18,24 @@ class Login extends Component {
           <div className="material-icons">close</div>
         </button>
         <form action="#" className="left">
-          <label htmlFor="username">Username</label>
-          <input
-            type="text"
-            id="username"
-            name="username"
-            placeholder="Enter username"
-          />
-          <label htmlFor="password">Password</label>
-          <input
-            type="password"
-            name="password"
-            id="password"
-            placeholder="Enter password"
-          />
+          <label>
+            Email address:
+            <input
+              type="text"
+              id="email"
+              name="email"
+              placeholder="Enter email"
+            />
+          </label>
+          <label>
+            Password:
+            <input
+              type="password"
+              name="password"
+              id="password"
+              placeholder="Enter password"
+            />
+          </label>
           <input type="submit" value="Login" className="btn primary" />
         </form>
         <p>or</p>
