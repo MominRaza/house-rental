@@ -6,7 +6,7 @@ import FeaturedSection from "./components/featuredSection";
 import NewsSection from "./components/newsSection";
 import Footer from "./components/footer";
 
-class Home extends Component {
+class App extends Component {
   state = {};
   render() {
     return (
@@ -22,4 +22,4 @@ class Home extends Component {
   }
 }
 
-export default Home;
+export default App;
