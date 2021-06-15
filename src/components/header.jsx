@@ -21,14 +21,14 @@ class Header extends Component {
             <Link to="#" className="btn btn-t secondary sm">
               News
             </Link>
-            <a
-              href="#"
+            <Link
+              to="#"
               className="btn btn-t secondary sm icon-l"
               onClick={this.props.onLoginToggle}
             >
               <i className="material-icons md-18">person_outline</i>
               Login
-            </a>
+            </Link>
             <Link to="#" className="btn btn-t secondary sm icon-o">
               <i className="material-icons md-18">menu</i>
             </Link>
