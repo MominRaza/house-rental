@@ -1,8 +1,13 @@
 .logo {
   height: 25px;
 }
+header:not(.home-page) {
+  height: 56px;
+}
 .appbar {
   justify-content: space-between;
+}
+.home-page .appbar {
   background: unset;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), transparent);
 }
@@ -14,7 +19,7 @@
 }
 .home {
   height: 50vh;
-  background-image: url(../images/defaultBanner.jpg);
+  background-image: url(./images/defaultBanner.jpg);
   background-size: cover;
   padding-top: 80px;
   color: white;

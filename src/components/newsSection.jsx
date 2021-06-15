@@ -1,6 +1,13 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
+import news1 from "../images/news1.jpg";
+import news2 from "../images/news2.jpg";
+import news3 from "../images/news3.jpg";
+import news4 from "../images/news4.jpg";
+import news5 from "../images/news5.jpg";
+import news6 from "../images/news6.jpg";
+
 class NewsSection extends Component {
   state = {};
   render() {
@@ -12,7 +19,7 @@ class NewsSection extends Component {
           <div className="flex">
             <Link to="#" className="flex-item card">
               <img
-                src="./images/Rs-65-lakhs-in-pending-dues-towards-UP-RERA-recovered-from-builders-Thumbnail-300x200-compressed.jpg"
+                src={news1}
                 alt="The pros and cons of buying agricultural land"
               />
               <h3>The pros and cons of buying agricultural land</h3>
@@ -25,7 +32,7 @@ class NewsSection extends Component {
             </Link>
             <Link to="#" className="flex-item card">
               <img
-                src="./images/Stamp-duty-and-registration-charges-in-Lucknow-Thumbnail-300x200-compressed.jpg"
+                src={news2}
                 alt="The pros and cons of buying agricultural land"
               />
               <h3>The pros and cons of buying agricultural land</h3>
@@ -38,7 +45,7 @@ class NewsSection extends Component {
             </Link>
             <Link to="#" className="flex-item card">
               <img
-                src="./images/Stamp-duty-in-key-tier-2-cities-in-India-Thumbnail-300x200-compressed.jpg"
+                src={news3}
                 alt="The pros and cons of buying agricultural land"
               />
               <h3>The pros and cons of buying agricultural land</h3>
@@ -51,7 +58,7 @@ class NewsSection extends Component {
             </Link>
             <Link to="#" className="flex-item card">
               <img
-                src="./images/The-pros-and-cons-of-buying-agricultural-land-Thumbnail.jpg"
+                src={news4}
                 alt="The pros and cons of buying agricultural land"
               />
               <h3>The pros and cons of buying agricultural land</h3>
@@ -64,7 +71,7 @@ class NewsSection extends Component {
             </Link>
             <Link to="#" className="flex-item card">
               <img
-                src="./images/5-posh-areas-in-Lucknow-Thumbnail-300x200-compressed.jpg"
+                src={news5}
                 alt="The pros and cons of buying agricultural land"
               />
               <h3>The pros and cons of buying agricultural land</h3>
@@ -77,7 +84,7 @@ class NewsSection extends Component {
             </Link>
             <Link to="#" className="flex-item card">
               <img
-                src="./images/How-will-COVID-19-impact-investment-in-land-Thumbnail-300x200-compressed.jpg"
+                src={news6}
                 alt="The pros and cons of buying agricultural land"
               />
               <h3>The pros and cons of buying agricultural land</h3>

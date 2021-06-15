@@ -1,13 +1,15 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
+import logo from "../images/logo.png";
+
 class Footer extends Component {
   state = {};
   render() {
     return (
       <footer className="footer grid grid-4">
         <div className="grid-item">
-          <img src="./images/logo.png" alt="House Rental" className="logo" />
+          <img src={logo} alt="House Rental" className="logo" />
           <p className="b2 copy">&copy; 2012-21 Locon Solutions Pvt. Ltd.</p>
         </div>
         <div className="grid-item">

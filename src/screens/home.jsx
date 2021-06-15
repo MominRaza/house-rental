@@ -8,12 +8,12 @@ class Home extends Component {
   state = {};
   render() {
     return (
-      <React.Fragment>
+      <>
         <SearchSection />
         <HousingSection />
         <FeaturedSection />
         <NewsSection />
-      </React.Fragment>
+      </>
     );
   }
 }
