@@ -23,11 +23,17 @@ class Header extends Component {
                   <Link to="#" className="btn secondary sm">
                     List Property
                   </Link>
-                  <Link to="#" className="btn btn-t secondary sm icon-l">
+                  <Link
+                    to="/favourites"
+                    className="btn btn-t secondary sm icon-l"
+                  >
                     <i className="material-icons md-18">favorite_outline</i>
-                    Favorite
+                    Favourites
                   </Link>
-                  <Link to="#" className="btn btn-t secondary sm">
+                  <Link
+                    to="/news-and-articles"
+                    className="btn btn-t secondary sm"
+                  >
                     News
                   </Link>
                   <Link

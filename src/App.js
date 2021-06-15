@@ -50,6 +50,9 @@ class App extends Component {
           <Route path="/terms-and-conditions">
             <Terms />
           </Route>
+          <Route path="/favourites">
+            <Terms />
+          </Route>
           <Route path="*">
             <PageNotFound />
           </Route>

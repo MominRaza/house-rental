@@ -50,7 +50,7 @@ class Register extends Component {
             Accept <Link to="/terms">terms</Link> and
             <Link to="/conditions">conditions</Link>.
           </label>
-          <input type="submit" value="Register" />
+          <input type="submit" value="Register" className="btn primary" />
         </form>
         <p>or</p>
         <p>
