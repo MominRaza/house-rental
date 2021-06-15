@@ -11,16 +11,16 @@ class Header extends Component {
             <img src="./images/logo.png" alt="House Rental" className="logo" />
           </Link>
           <div className="trailing">
-            <a href="#" className="btn secondary sm">
+            <Link to="#" className="btn secondary sm">
               List Property
-            </a>
-            <a href="#" className="btn btn-t secondary sm icon-l">
+            </Link>
+            <Link to="#" className="btn btn-t secondary sm icon-l">
               <i className="material-icons md-18">favorite_outline</i>
               Favorite
-            </a>
-            <a href="#" className="btn btn-t secondary sm">
+            </Link>
+            <Link to="#" className="btn btn-t secondary sm">
               News
-            </a>
+            </Link>
             <a
               href="#"
               className="btn btn-t secondary sm icon-l"
@@ -29,9 +29,9 @@ class Header extends Component {
               <i className="material-icons md-18">person_outline</i>
               Login
             </a>
-            <a href="#" className="btn btn-t secondary sm icon-o">
+            <Link to="#" className="btn btn-t secondary sm icon-o">
               <i className="material-icons md-18">menu</i>
-            </a>
+            </Link>
           </div>
         </nav>
       </header>

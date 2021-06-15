@@ -13,24 +13,24 @@ class Footer extends Component {
           <p className="s1">COMPANY</p>
           <ul>
             <li>
-              <a href="#" className="b2">
+              <Link to="#" className="b2">
                 About Us
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" className="b2">
+              <Link to="#" className="b2">
                 Terms
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" className="b2">
+              <Link to="#" className="b2">
                 Privacy Policy
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" className="b2">
+              <Link to="#" className="b2">
                 Contact Us
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
@@ -38,14 +38,14 @@ class Footer extends Component {
           <p className="s1">EXPLORE</p>
           <ul>
             <li>
-              <a href="#" className="b2">
+              <Link to="#" className="b2">
                 News
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" className="b2">
+              <Link to="#" className="b2">
                 Sitemap
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
@@ -53,24 +53,24 @@ class Footer extends Component {
           <p className="s1">FOLLOW</p>
           <ul>
             <li>
-              <a href="#" className="b2">
+              <Link to="#" className="b2">
                 Facebook
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" className="b2">
+              <Link to="#" className="b2">
                 Instagram
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" className="b2">
+              <Link to="#" className="b2">
                 Twitter
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" className="b2">
+              <Link to="#" className="b2">
                 LinkedIn
-              </a>
+              </Link>
             </li>
           </ul>
         </div>

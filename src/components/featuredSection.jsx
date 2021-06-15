@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 class FeaturedSection extends Component {
   state = {};
@@ -9,34 +10,34 @@ class FeaturedSection extends Component {
           <h2 className="h4">Featured Collections</h2>
           <p>Handpicked projects for you</p>
           <div className="flex">
-            <a href="#" className="flex-item card">
+            <Link to="#" className="flex-item card">
               <div>
                 <img src="./images/medium.webp" alt="Ready to Move-In" />
                 <h3>Ready to Move-In</h3>
                 <p>Comfortable homes available for immediate use</p>
               </div>
-            </a>
-            <a href="#" className="flex-item card">
+            </Link>
+            <Link to="#" className="flex-item card">
               <div>
                 <img src="./images/medium (1).webp" alt="Townships" />
                 <h3>Townships</h3>
                 <p>Redefining community living</p>
               </div>
-            </a>
-            <a href="#" className="flex-item card">
+            </Link>
+            <Link to="#" className="flex-item card">
               <div>
                 <img src="./images/medium (2).webp" alt="Luxury" />
                 <h3>Luxury</h3>
                 <p>Premium housing for the lifestyle-conscious</p>
               </div>
-            </a>
-            <a href="#" className="flex-item card">
+            </Link>
+            <Link to="#" className="flex-item card">
               <div>
                 <img src="./images/medium (3).webp" alt="Affordable Homes" />
                 <h3>Affordable Homes</h3>
                 <p>Pocket-friendly homes</p>
               </div>
-            </a>
+            </Link>
           </div>
         </div>
       </section>
