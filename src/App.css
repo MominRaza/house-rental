@@ -1,5 +1,5 @@
 .logo {
-  height: 25px;
+  height: 24px;
 }
 header:not(.home-page) {
   height: 56px;
@@ -18,7 +18,7 @@ header:not(.home-page) {
   text-decoration: none;
 }
 .home {
-  height: 50vh;
+  height: 55vh;
   background-image: url(./images/defaultBanner.jpg);
   background-size: cover;
   padding-top: 80px;
@@ -90,7 +90,7 @@ header:not(.home-page) {
   padding-bottom: 10px;
 }
 .housing .flex-item {
-  min-width: 170px;
+  min-width: 200px;
   padding: 20px;
   border-radius: 10px;
 }

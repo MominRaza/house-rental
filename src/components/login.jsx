@@ -12,7 +12,7 @@ class Login extends Component {
       <div className={classes}>
         <h2 className="h4">Login</h2>
         <button
-          className="btn btn-t danger sm"
+          className="btn btn-t danger sm modal-close"
           onClick={this.props.onLoginToggle}
         >
           <div className="material-icons">close</div>

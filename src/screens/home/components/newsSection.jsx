@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
-import news1 from "../images/news1.jpg";
-import news2 from "../images/news2.jpg";
-import news3 from "../images/news3.jpg";
-import news4 from "../images/news4.jpg";
-import news5 from "../images/news5.jpg";
-import news6 from "../images/news6.jpg";
+import news1 from "../../../images/news1.jpg";
+import news2 from "../../../images/news2.jpg";
+import news3 from "../../../images/news3.jpg";
+import news4 from "../../../images/news4.jpg";
+import news5 from "../../../images/news5.jpg";
+import news6 from "../../../images/news6.jpg";
 
 class NewsSection extends Component {
   state = {};
@@ -14,7 +14,7 @@ class NewsSection extends Component {
     return (
       <section className="news">
         <div>
-          <h2 className="h4">News & Articles</h2>
+          <h2 className="h4">News &amp; Articles</h2>
           <p>Read what's happening in Real Estate</p>
           <div className="flex">
             <Link to="#" className="flex-item card">
