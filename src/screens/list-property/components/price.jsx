@@ -26,6 +26,8 @@ class Price extends Component {
             <input type="radio" name="price-range" />
             Non-negosiable
           </label>
+        </div>
+        <div className="flex">
           <label>
             Price:
             <input type="number" name="price" />
