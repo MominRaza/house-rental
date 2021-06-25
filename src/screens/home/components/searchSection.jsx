@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { NavLink } from "react-router-dom";
 
 class SearchSection extends Component {
   state = {};
@@ -9,9 +10,40 @@ class SearchSection extends Component {
         <h2 className="h5">Yahan Search Khatam Karo</h2>
         <div className="card bg-dark">
           <div className="tab">
-            <div className="tab-item selected">BUY</div>
-            <div className="tab-item">RENT</div>
-            <div className="tab-item">PLOTS</div>
+            <NavLink
+              to="#buy"
+              isActive={() => {
+                return (
+                  window.location.hash === "#buy" ||
+                  (window.location.pathname === "/" &&
+                    window.location.hash === "")
+                );
+              }}
+              className="tab-item white"
+              activeClassName="selected"
+            >
+              BUY
+            </NavLink>
+            <NavLink
+              to="#rent"
+              isActive={() => {
+                return window.location.hash === "#rent";
+              }}
+              className="tab-item white"
+              activeClassName="selected"
+            >
+              RENT
+            </NavLink>
+            <NavLink
+              to="#plots"
+              isActive={() => {
+                return window.location.hash === "#plots";
+              }}
+              className="tab-item white"
+              activeClassName="selected"
+            >
+              PLOTS
+            </NavLink>
           </div>
           <form action="/search">
             <select name="location">

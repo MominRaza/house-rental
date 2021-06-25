@@ -12,7 +12,7 @@ class SearchHeader extends Component {
           <Link to="/" className="leading">
             <img src={logo} alt="House Rental" className="logo" />
           </Link>
-          <div className="search-box">
+          <div className="search-box flex">
             <select name="location">
               <option value="Lucknow">Lucknow</option>
               <option value="Mumbai">Mumbai</option>

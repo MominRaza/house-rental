@@ -17,18 +17,21 @@ class Address extends Component {
           Locelity
           <input type="text" name="locelity" />
         </label>
-        <label>
-          Flat No.
-          <input type="text" name="flat" />
-        </label>
-        <label>
-          Floor No.
-          <input type="text" name="floor" />
-        </label>
-        <label>
-          Total Floor
-          <input type="text" name="total-floor" />
-        </label>
+
+        <div className="flex">
+          <label>
+            Flat No.
+            <input type="text" name="flat" />
+          </label>
+          <label>
+            Floor No.
+            <input type="text" name="floor" />
+          </label>
+          <label>
+            Total Floor
+            <input type="text" name="total-floor" />
+          </label>
+        </div>
         <button className="btn secondary">Back</button>
         <button type="submit" className="btn primary">
           Continue

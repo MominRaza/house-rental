@@ -5,20 +5,24 @@ class PhotosVideos extends Component {
   render() {
     return (
       <div className="card">
-        <label>
-          Photo
-          <input type="file" name="photo" />
-        </label>
-        <button className="btn primary sm">
-          <i className="material-icons">add</i>
-        </button>
-        <label>
-          Video
-          <input type="file" name="photo" />
-        </label>
-        <button className="btn primary sm">
-          <i className="material-icons">add</i>
-        </button>
+        <div className="flex">
+          <label>
+            Photo
+            <input type="file" name="photo" accept="image/*" />
+          </label>
+          <button className="btn primary sm">
+            <i className="material-icons">add</i>
+          </button>
+        </div>
+        <div className="flex">
+          <label>
+            Video
+            <input type="file" name="video" accept="video/*" />
+          </label>
+          <button className="btn primary sm">
+            <i className="material-icons">add</i>
+          </button>
+        </div>
         <button className="btn secondary">Back</button>
         <button type="submit" className="btn primary">
           List Property

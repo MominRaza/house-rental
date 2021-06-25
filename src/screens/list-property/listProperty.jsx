@@ -10,33 +10,33 @@ function ListProperty() {
 
   return (
     <section className="list-property">
-      <h1>List Property</h1>
+      <h1 className="h3">List Property</h1>
       <div className="tab">
         <NavLink
           exact
           to={match.url}
-          className="tab-item"
+          className="tab-item black"
           activeClassName="selected"
         >
           Basic Information
         </NavLink>
         <NavLink
           to={`${match.url}/price`}
-          className="tab-item"
+          className="tab-item black"
           activeClassName="selected"
         >
           Price
         </NavLink>
         <NavLink
           to={`${match.url}/address`}
-          className="tab-item"
+          className="tab-item black"
           activeClassName="selected"
         >
           Address
         </NavLink>
         <NavLink
           to={`${match.url}/photos-videos`}
-          className="tab-item"
+          className="tab-item black"
           activeClassName="selected"
         >
           Photos/Videos
