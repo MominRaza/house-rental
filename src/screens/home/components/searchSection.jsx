@@ -14,7 +14,7 @@ class SearchSection extends Component {
             <div className="tab-item">PLOTS</div>
           </div>
           <form action="/search">
-            <select name="location" id="location">
+            <select name="location">
               <option value="Lucknow">Lucknow</option>
               <option value="Mumbai">Mumbai</option>
               <option value="Bengaluru">Bengaluru</option>

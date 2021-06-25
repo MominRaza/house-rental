@@ -54,7 +54,7 @@ class Basic extends Component {
         </label>
         <label>
           <input type="radio" name="property-type" id="" />
-          Perty Place
+          Party Place
         </label>
         <p>Construction Status:</p>
         <label>
