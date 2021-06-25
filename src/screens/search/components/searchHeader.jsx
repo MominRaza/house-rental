@@ -3,11 +3,11 @@ import { Link } from "react-router-dom";
 
 import logo from "../../../images/logo.png";
 
-class HomeHeader extends Component {
+class SearchHeader extends Component {
   state = {};
   render() {
     return (
-      <header className="home-page">
+      <header>
         <nav className="appbar">
           <Link to="/" className="leading">
             <img src={logo} alt="House Rental" className="logo" />
@@ -38,4 +38,4 @@ class HomeHeader extends Component {
   }
 }
 
-export default HomeHeader;
+export default SearchHeader;

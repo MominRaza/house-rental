@@ -2,11 +2,13 @@ import React, { Component } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import Header from "./components/header";
-import HomeHeader from "./screens/home/components/home-header";
+import HomeHeader from "./screens/home/components/homeHeader";
+import SearchHeader from "./screens/search/components/searchHeader";
 import Footer from "./components/footer";
 import Login from "./components/login";
 
 import Home from "./screens/home/home";
+import Search from "./screens/search/search";
 import ListProperty from "./screens/list-property/listProperty";
 import Register from "./screens/register";
 import LoginScreen from "./screens/loginScreen";
@@ -32,6 +34,10 @@ class App extends Component {
           <Route exact path="/">
             <HomeHeader onLoginToggle={this.toggleLogin} />
             <Home />
+          </Route>
+          <Route path="/search">
+            <SearchHeader onLoginToggle={this.toggleLogin} />
+            <Search />
           </Route>
           <Route path="/login">
             <Header onLoginToggle={this.toggleLogin} />
