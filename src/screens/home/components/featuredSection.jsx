@@ -5,6 +5,7 @@ import ready from "../../../images/ready.webp";
 import townships from "../../../images/township.webp";
 import luxury from "../../../images/luxury.webp";
 import affordable from "../../../images/affordable.webp";
+import hour from "../../../images/hour.jpg";
 
 class FeaturedSection extends Component {
   state = {};
@@ -38,7 +39,7 @@ class FeaturedSection extends Component {
             </Link>
             <Link to="/search?type=hour" className="flex-item card">
               <div>
-                <img src={luxury} alt="Hour Ready" />
+                <img src={hour} alt="Hour Ready" />
                 <h3>Hour Ready</h3>
                 <p>Premium housing for the lifestyle-conscious</p>
               </div>
