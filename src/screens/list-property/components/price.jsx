@@ -123,7 +123,7 @@ class Price extends Component {
           <input type="checkbox" name="property-perks" />
           Lampboard
         </label>
-        <button className="btn primary">Back</button>
+        <button className="btn secondary">Back</button>
         <button type="submit" className="btn primary">
           Continue
         </button>
