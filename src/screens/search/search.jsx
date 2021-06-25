@@ -6,15 +6,14 @@ import Filter from "./components/filter";
 class Search extends Component {
   state = {};
   render() {
+    const properties = this.props.properties;
     return (
       <>
         <Filter />
         <div className="list results">
-          <Result />
-          <Result />
-          <Result />
-          <Result />
-          <Result />
+          {properties.map((property) => (
+            <Result property={property} />
+          ))}
         </div>
       </>
     );

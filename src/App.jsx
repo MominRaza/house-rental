@@ -23,6 +23,99 @@ import Favourites from "./screens/favourites";
 class App extends Component {
   state = {
     loginModal: false,
+    properties: [
+      {
+        id: 1,
+        price: "1200000",
+        city: "lucknow",
+        address: "Rudram city, Habuapur, Lucknow",
+        userName: "Sachin Rawat",
+        userImageUrl: "images/user1.jpg",
+        propertyImageUrl: "images/property1.jpg",
+        details:
+          "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta numquam, cumque dolore maxime eius quis.",
+        want: "sale",
+        type: "Residencial Ploat",
+      },
+      {
+        id: 2,
+        price: "160000",
+        city: "lucknow",
+        address: "Rudram city, Habuapur, Lucknow",
+        userName: "Harsh Rawat",
+        userImageUrl: "images/user2.jpg",
+        propertyImageUrl: "images/property2.jpg",
+        details:
+          "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta numquam, cumque dolore maxime eius quis.",
+        want: "rent",
+        type: "Residencial Ploat",
+      },
+      {
+        id: 3,
+        price: "140000",
+        city: "lucknow",
+        address: "Rudram city, Habuapur, Lucknow",
+        userName: "Rajat Rawat",
+        userImageUrl: "images/user3.jpg",
+        propertyImageUrl: "images/property3.jpg",
+        details:
+          "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta numquam, cumque dolore maxime eius quis.",
+        want: "sale",
+        type: "Residencial Ploat",
+      },
+      {
+        id: 4,
+        price: "1200000",
+        city: "lucknow",
+        address: "Rudram city, Habuapur, Lucknow",
+        userName: "Habib Rawat",
+        userImageUrl: "images/user4.jpg",
+        propertyImageUrl: "images/property4.jpg",
+        details:
+          "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta numquam, cumque dolore maxime eius quis.",
+        want: "sale",
+        type: "Residencial Ploat",
+      },
+      {
+        id: 5,
+        price: "100000",
+        city: "lucknow",
+        address: "Rudram city, Habuapur, Lucknow",
+        userName: "Sachin Rawat",
+        userImageUrl: "images/user5.jpg",
+        propertyImageUrl: "images/property5.jpg",
+        details:
+          "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta numquam, cumque dolore maxime eius quis.",
+        want: "pg",
+        type: "Residencial Ploat",
+      },
+      {
+        id: 6,
+        price: "10000",
+        city: "bareilly",
+        address: "Rudram city, Habuapur, Lucknow",
+        userName: "Mashhood Rawat",
+        userImageUrl: "images/user6.jpg",
+        propertyImageUrl: "images/property6.jpg",
+        details:
+          "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta numquam, cumque dolore maxime eius quis.",
+        want: "rent",
+        type: "Residencial Ploat",
+      },
+      {
+        id: 7,
+        price: "20000",
+        city: "lucknow",
+        address: "Rudram city, Habuapur, Lucknow",
+        userName: "Najim Rawat",
+        userImageUrl: "images/user7.jpg",
+        propertyImageUrl: "images/property7.jpg",
+        details:
+          "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta numquam, cumque dolore maxime eius quis.",
+        want: "sale",
+        type: "Residencial Ploat",
+      },
+    ],
   };
   toggleLogin = () => {
     this.setState({ loginModal: !this.state.loginModal });
@@ -37,7 +130,7 @@ class App extends Component {
           </Route>
           <Route path="/search">
             <SearchHeader onLoginToggle={this.toggleLogin} />
-            <Search />
+            <Search properties={this.state.properties} />
           </Route>
           <Route path="/login">
             <Header onLoginToggle={this.toggleLogin} />
