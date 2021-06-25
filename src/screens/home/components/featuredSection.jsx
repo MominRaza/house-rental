@@ -41,7 +41,7 @@ class FeaturedSection extends Component {
               <div>
                 <img src={hour} alt="Hour Ready" />
                 <h3>Hour Ready</h3>
-                <p>Premium housing for the lifestyle-conscious</p>
+                <p>Enjoy perks of metered time.</p>
               </div>
             </Link>
             <Link to="/search?price=affordable" className="flex-item card">
