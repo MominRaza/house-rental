@@ -15,33 +15,33 @@ class HousingSection extends Component {
   render() {
     return (
       <section className="housing">
-        <h2 className="h4">Housing Edge</h2>
-        <p>The most rewarding destination for all home-related services.</p>
+        <h2 className="h4">Renting Benefits</h2>
+        <p>Enjoy the perks of renting and live with passion and ease.</p>
         <div className="flex">
           <Link to="#" className="flex-item card">
             <img src={payRent} alt="" />
-            <h3>Pay Rent</h3>
-            <p>Pay your rent using Credit Card and enjoy rewards</p>
+            <h3>Rent Payment</h3>
+            <p>Pay rent as you like and enjoy rewards.*</p>
           </Link>
           <Link to="#" className="flex-item card">
             <img src={rentAgreement} alt="" />
             <h3>Rent Agreement</h3>
-            <p>India's only online service with digital signing</p>
+            <p>Be safe and sign digitally now.</p>
           </Link>
           <Link to="#" className="flex-item card">
             <img src={movers} alt="" />
             <h3>Packers &amp; Movers</h3>
-            <p>5-star rated home shifting service for smooth move-ins</p>
+            <p>Preferred choices with rating by experienced users.</p>
           </Link>
           <Link to="#" className="flex-item card">
             <img src={tenantVerification} alt="" />
             <h3>Tenant Verification</h3>
-            <p>Authentic tenant verification at a click</p>
+            <p>Authentication is now only a click away.</p>
           </Link>
           <Link to="#" className="flex-item card">
             <img src={furniture} alt="" />
-            <h3>Rental Furniture</h3>
-            <p>Curated furniture to suit your home needs. Upto 50% discount</p>
+            <h3>Owner Verification</h3>
+            <p>Know your house owner before dealing.</p>
           </Link>
           <Link to="#" className="flex-item card">
             <img src={homeInteriors} alt="" />
@@ -51,13 +51,13 @@ class HousingSection extends Component {
           </Link>
           <Link to="#" className="flex-item card">
             <img src={propertyManagement} alt="" />
-            <h3>Property Management</h3>
-            <p>End to end services for landlords</p>
+            <h3>Eco Management</h3>
+            <p>Manage greenery in your life.</p>
           </Link>
           <Link to="#" className="flex-item card">
             <img src={solarRooftop} alt="" />
             <h3>Solar Rooftop</h3>
-            <p>Innovative residential solar solution</p>
+            <p>Recharge your power with sun and innovation.</p>
           </Link>
         </div>
       </section>
