@@ -11,6 +11,8 @@ class Price extends Component {
             <input type="radio" name="price-type" />
             Sell
           </label>
+          </div>
+          <div className= "flex">
           <label>
             <input type="radio" name="price-type" />
             Rent
