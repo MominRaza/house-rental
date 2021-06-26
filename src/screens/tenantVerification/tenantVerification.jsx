@@ -1,5 +1,8 @@
 import React, { Component } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, Switch, Route } from "react-router-dom";
+
+import Basic from "./components/basic";
+import Advanced from "./components/advanced";
 
 class TenantVerification extends Component {
   state = {};
@@ -12,13 +15,17 @@ class TenantVerification extends Component {
           <i className="material-icons">chevron_right</i>
           Enter tenant details
           <i className="material-icons">chevron_right</i>
-          Make Payment Get Verification
+          Make Payment
           <i className="material-icons">chevron_right</i>
-          Report in 4-5 days
+          Get Verification Report in 4-5 days
         </p>
         <h3 className="h4">Choos a plan</h3>
         <div className="flex">
-          <NavLink to="/tenant-verification/basic" className="flex-item card">
+          <NavLink
+            to="/tenant-verification/basic"
+            className="flex-item card"
+            activeClassName="active"
+          >
             <p className="h6">Basic</p>
             <p className="s1">Rs. 50</p>
             <p>
@@ -30,6 +37,7 @@ class TenantVerification extends Component {
           <NavLink
             to="/tenant-verification/advanced"
             className="flex-item card"
+            activeClassName="active"
           >
             <p className="h6">Advanced</p>
             <p className="s1">Rs. 150</p>
@@ -44,6 +52,14 @@ class TenantVerification extends Component {
             <button className="btn primary">Choose &amp; Verify</button>
           </NavLink>
         </div>
+        <Switch>
+          <Route path="/tenant-verification/basic">
+            <Basic />
+          </Route>
+          <Route path="/tenant-verification/advanced">
+            <Advanced />
+          </Route>
+        </Switch>
       </section>
     );
   }
