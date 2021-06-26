@@ -286,3 +286,87 @@ header:not(.home-page) {
 .news-page h3 {
   margin: 20px 0;
 }
+.rent-payment {
+  margin: 0 auto;
+  max-width: 1000px;
+  padding: 50px 0;
+}
+.rent-payment h1 {
+  margin-bottom: 30px;
+}
+.rent-payment > .flex {
+  gap: 30px;
+  width: 100%;
+  overflow: hidden;
+  padding: 30px;
+}
+.rent-payment .flex-item {
+  padding: 0;
+}
+.rent-payment .flex-item > div {
+  position: relative;
+  overflow: hidden;
+  height: 200px;
+  border-radius: 10px;
+  text-align: center;
+  color: white;
+}
+.rent-payment .flex-item.active {
+  transform: scale(1.1);
+}
+.rent-payment .flex-item > div::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(transparent, transparent, black);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.rent-payment .flex-item img {
+  width: 100%;
+  height: 100%;
+}
+.rent-payment .flex-item h3 {
+  position: absolute;
+  margin: 10px 0;
+  bottom: 10px;
+  width: 100%;
+}
+.card.payment {
+  max-width: 600px;
+  margin: 0 auto;
+  margin-top: 50px;
+  padding: 20px;
+}
+.card.payment .flex {
+  overflow: hidden;
+}
+
+.packers {
+  max-width: 1000px;
+  margin: 50px auto;
+}
+.packers .list-item {
+  padding: 20px;
+}
+.packers h1 {
+  margin-bottom: 30px;
+}
+.packers img {
+  margin-right: 30px;
+}
+.packers .btn {
+  margin-right: 20px;
+  margin-top: 30px;
+}
+.packers .ratings {
+  margin-top: 16px;
+}
+.packers .ratings span:first-child {
+  font-weight: bold;
+  margin-right: 10px;
+}
+.packers .ratings span:last-child {
+  margin-left: 5px;
+}
