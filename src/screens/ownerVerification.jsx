@@ -16,14 +16,14 @@ class OwnerVerification extends Component {
             Tenant Adhar Card Number:
             <input type="text" name="tenant-adhar-number" />
           </label>
+          <label>
+            Tenant Phone Number:
+            <input type="text" name="tenant-phone" />
+          </label>
           <p>Owner Details</p>
           <label>
             Owner Name:
             <input type="text" name="owner-name" />
-          </label>
-          <label>
-            Owner Phone Number:
-            <input type="text" name="owner-phone" />
           </label>
           <label>
             Adhar Card Number:
@@ -38,7 +38,7 @@ class OwnerVerification extends Component {
             <input type="text" name="pan-number" />
           </label>
           <label>
-            Owner Father Name:
+            Owner Father's Name:
             <input type="text" name="owner-father" />
           </label>
           <p>Owner Permanent Address</p>
