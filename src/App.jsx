@@ -20,7 +20,7 @@ import News from "./screens/news";
 import Privacy from "./screens/privacy";
 import Terms from "./screens/terms";
 import Favourites from "./screens/favourites";
-import RentPayment from "./screens/rentPayment";
+import RentPayment from "./screens/rentPayment/rentPayment";
 import RentAgreement from "./screens/rentAgreement";
 import PackersMovers from "./screens/packersMovers";
 import TenantVerification from "./screens/tenantVerification";
