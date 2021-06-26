@@ -57,11 +57,13 @@ class News extends Component {
   };
   render() {
     return (
-      <section className="news">
+      <section className="news-page">
         <h1 className="h3">News and Articles</h1>
         <p className="b1">Read what's happening in Real Estate</p>
         {this.state.news.map((newsItem) => (
-          <NewsItem news={newsItem} />
+          <div className="list-item">
+            <NewsItem news={newsItem} />
+          </div>
         ))}
       </section>
     );
