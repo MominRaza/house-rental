@@ -9,7 +9,7 @@ function ListProperty() {
   let match = useRouteMatch();
 
   return (
-    <section className="list-property">
+    <section className="list-property center">
       <h1 className="h3">List Property</h1>
       <div className="tab">
         <NavLink

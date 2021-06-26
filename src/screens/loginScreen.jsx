@@ -6,9 +6,9 @@ class LoginScreen extends Component {
   state = {};
   render() {
     return (
-      <section className="login">
+      <section className="login center">
         <h1 className="h3">Login</h1>
-        <form action="#" className="card">
+        <form action="#" className="card left">
           <label>
             Email address:
             <input
@@ -29,7 +29,7 @@ class LoginScreen extends Component {
           </label>
           <input type="submit" value="Login" className="btn primary" />
         </form>
-        <p>or</p>
+        <p className="or">or</p>
         <p>
           Not have an account <Link to="/register">Register</Link>
         </p>

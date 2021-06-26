@@ -4,7 +4,7 @@ class About extends Component {
   state = {};
   render() {
     return (
-      <section className="about card">
+      <section className="about card center">
         <h1 className="h3">Welcome to Housing</h1>
         <p className="b1">
           We are the fastest growing company in the online real estate space.

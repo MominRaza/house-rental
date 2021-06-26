@@ -4,9 +4,9 @@ class Basic extends Component {
   state = {};
   render() {
     return (
-      <div className="card">
+      <div className="card left">
+        <p>I want to:</p>
         <div className="flex">
-          <p>I want to:</p>
           <label>
             <input type="radio" name="i-want-to" id="" />
             Sell
@@ -20,8 +20,8 @@ class Basic extends Component {
             PG / Co Living
           </label>
         </div>
+        <p>Property purpose:</p>
         <div className="flex">
-          <p>Property purpose:</p>
           <label>
             <input type="radio" name="property-purpose" id="" />
             Living
@@ -31,8 +31,8 @@ class Basic extends Component {
             Business
           </label>
         </div>
+        <p>Property type:</p>
         <div className="flex">
-          <p>Property type:</p>
           <label>
             <input type="radio" name="property-type" id="" />
             Apartment
@@ -62,8 +62,8 @@ class Basic extends Component {
             Party Place
           </label>
         </div>
+        <p>Construction Status:</p>
         <div className="flex">
-          <p>Construction Status:</p>
           <label>
             <input type="radio" name="construction-status" id="" />
             Ready to move
@@ -73,8 +73,8 @@ class Basic extends Component {
             Under construction
           </label>
         </div>
+        <p>BHK:</p>
         <div className="flex">
-          <p>BHK:</p>
           <label>
             <input type="radio" name="bhk" id="" />
             Single Room
@@ -92,13 +92,13 @@ class Basic extends Component {
             <input type="radio" name="bhk" id="" />
             3+ BHK
           </label>
-          <label>
-            Enter Manually:
-            <input type="number" name="bhk-value" id="" />
-          </label>
         </div>
+        <label>
+          Enter Manually:
+          <input type="number" name="bhk-value" id="" />
+        </label>
+        <p>Bathroom:</p>
         <div className="flex">
-          <p>Bathroom:</p>
           <label>
             <input type="radio" name="bathroom" id="" />0
           </label>
@@ -115,13 +115,13 @@ class Basic extends Component {
             <input type="radio" name="bathroom" id="" />
             3+
           </label>
-          <label>
-            Enter Manually:
-            <input type="number" name="bathroom-value" id="" />
-          </label>
         </div>
+        <label>
+          Enter Manually:
+          <input type="number" name="bathroom-value" id="" />
+        </label>
+        <p>Balcony:</p>
         <div className="flex">
-          <p>Balcony:</p>
           <label>
             <input type="radio" name="balcony" id="" />0
           </label>
@@ -138,13 +138,13 @@ class Basic extends Component {
             <input type="radio" name="balcony" id="" />
             3+
           </label>
-          <label>
-            Enter Manually:
-            <input type="number" name="balcony-value" id="" />
-          </label>
         </div>
+        <label>
+          Enter Manually:
+          <input type="number" name="balcony-value" id="" />
+        </label>
+        <p>Furnish Type:</p>
         <div className="flex">
-          <p>Furnish Type:</p>
           <label>
             <input type="radio" name="furnish-type" id="" />
             Fully Furnished
@@ -158,8 +158,8 @@ class Basic extends Component {
             Unfurnished
           </label>
         </div>
+        <p>Parking:</p>
         <div className="flex">
-          <p>Parking:</p>
           <label>
             <input type="radio" name="parking" id="" />
             Covered
@@ -173,10 +173,11 @@ class Basic extends Component {
             No parking
           </label>
         </div>
+        <p>Area:</p>
         <div className="flex">
-          <p>Area:</p>
           <label>
             <input
+              className="area"
               type="text"
               name="parking"
               id=""
@@ -185,7 +186,9 @@ class Basic extends Component {
             Sq-ft
           </label>
         </div>
-        <input type="submit" value="Continue" className="btn primary" />
+        <div className="flex submit">
+          <input type="submit" value="Continue" className="btn primary" />
+        </div>
       </div>
     );
   }

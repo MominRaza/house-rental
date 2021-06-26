@@ -5,7 +5,7 @@ class Login extends Component {
   state = {};
 
   render() {
-    let classes = "modal card center";
+    let classes = "modal card center rd-4";
     classes += this.props.loginModal ? " modal-active" : "";
 
     return (
@@ -38,7 +38,7 @@ class Login extends Component {
           </label>
           <input type="submit" value="Login" className="btn primary" />
         </form>
-        <p>or</p>
+        <p className="or">or</p>
         <p>
           Not have an account{" "}
           <Link to="/register" onClick={this.props.onLoginToggle}>

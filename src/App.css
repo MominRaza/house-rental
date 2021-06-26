@@ -181,3 +181,85 @@ header:not(.home-page) {
   color: rgba(255, 255, 255, 0.6);
   text-decoration: none;
 }
+
+.about.card {
+  max-width: 1000px;
+  margin: 10px auto;
+  min-height: 70vh;
+  padding: 50px;
+}
+
+.about.card h1 {
+  margin-bottom: 30px;
+}
+.about.card h2 {
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.modal {
+  padding: 20px;
+}
+.or {
+  margin: 20px;
+}
+
+.register,
+.login {
+  max-width: 500px;
+  margin: 20px auto;
+  min-height: 60vh;
+  padding: 50px 0;
+}
+.register h1,
+.login h1 {
+  margin-bottom: 20px;
+}
+.register form,
+.login form {
+  padding: 20px;
+}
+
+.list-property {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 50px 0;
+}
+.list-property h1 {
+  margin-bottom: 20px;
+}
+.list-property .tab {
+  margin-bottom: 30px;
+}
+.list-property .card {
+  padding: 40px;
+}
+.list-property label {
+  display: inline-block;
+  white-space: nowrap;
+  margin-top: 0;
+  margin-bottom: 0;
+  min-width: 100px;
+}
+.list-property .flex {
+  flex-wrap: wrap;
+  overflow: hidden;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+.list-property p {
+  margin-top: 10px;
+  font-weight: bold;
+}
+.list-property .area {
+  display: inline-block;
+  margin-right: 10px;
+}
+.list-property .flex.submit {
+  flex-direction: row-reverse;
+  margin-top: 50px;
+  margin-bottom: 0;
+}
+.list-property .flex.submit .btn {
+  width: 200px;
+}

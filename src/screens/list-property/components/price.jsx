@@ -4,22 +4,21 @@ class Price extends Component {
   state = {};
   render() {
     return (
-      <div className="card">
+      <div className="card left">
+        <p>Price Type:</p>
         <div className="flex">
-          <p>Price Type:</p>
           <label>
             <input type="radio" name="price-type" />
             Sell
           </label>
-        </div>
-        <div className="flex">
+
           <label>
             <input type="radio" name="price-type" />
             Rent
           </label>
         </div>
+        <p>Price Range:</p>
         <div className="flex">
-          <p>Price Range:</p>
           <label>
             <input type="radio" name="price-range" />
             Negosiable
@@ -35,8 +34,8 @@ class Price extends Component {
             <input type="number" name="price" />
           </label>
         </div>
+        <p>Rent Mode:</p>
         <div className="flex">
-          <p>Rent Mode:</p>
           <label>
             <input type="radio" name="rent-mode" />
             Online
@@ -49,13 +48,15 @@ class Price extends Component {
             <input type="radio" name="rent-mode" />
             Both
           </label>
+        </div>
+        <div className="flex">
           <label>
             Rent:
             <input type="number" name="rent" />
           </label>
         </div>
+        <p>Rent Includes:</p>
         <div className="flex">
-          <p>Rent Includes:</p>
           <label>
             <input type="checkbox" name="rent-includes" />
             Electricity Bill
@@ -73,8 +74,8 @@ class Price extends Component {
             Maintainence Bill
           </label>
         </div>
+        <p>Rent Excludes:</p>
         <div className="flex">
-          <p>Rent Excludes:</p>
           <label>
             <input type="checkbox" name="rent-excludes" />
             Electricity Bill
@@ -92,8 +93,8 @@ class Price extends Component {
             Maintainence Bill
           </label>
         </div>
+        <p>Property Perks:</p>
         <div className="flex">
-          <p>Property Perks:</p>
           <label>
             <input type="checkbox" name="property-perks" />
             Inverter
@@ -139,10 +140,12 @@ class Price extends Component {
             Lampboard
           </label>
         </div>
-        <button className="btn secondary">Back</button>
-        <button type="submit" className="btn primary">
-          Continue
-        </button>
+        <div className="flex submit">
+          <button type="submit" className="btn primary">
+            Continue
+          </button>
+          <button className="btn secondary">Back</button>
+        </div>
       </div>
     );
   }

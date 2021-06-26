@@ -6,9 +6,9 @@ class Register extends Component {
   state = {};
   render() {
     return (
-      <section className="register">
+      <section className="register center">
         <h1 className="h3">Register</h1>
-        <form action="#" className="card">
+        <form action="#" className="card left rd-4">
           <label>
             Full name:
             <input
@@ -52,7 +52,7 @@ class Register extends Component {
           </label>
           <input type="submit" value="Register" className="btn primary" />
         </form>
-        <p>or</p>
+        <p className="or">or</p>
         <p>
           Allready have an account <Link to="/login">Login</Link>
         </p>
