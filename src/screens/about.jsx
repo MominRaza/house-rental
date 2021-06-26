@@ -5,21 +5,20 @@ class About extends Component {
   render() {
     return (
       <section className="about card center">
-        <h1 className="h3">Welcome to Housing</h1>
+        <h1 className="h3">HOUSE RENTAL</h1>
+        <h2 className="h4">Welcomes You!</h2>
         <p className="b1">
-          We are the fastest growing company in the online real estate space.
-          Born out of the need to simplify the search for a home, free of fake
-          listings and endless site visits, we created a unique property search
-          platform that filled the gaps left by others in the market. Led by
-          passionate problem-solvers, and backed by top investors from around
-          the world, we are poised to become the most trusted place to find a
-          home in India.
+          We,House Rental is an emerging platform for those who wants to find genuine real estates offerings.
+          We understand the difficulty in finding desired property hence we are presenting a very detailed and 
+          specified properties which will provide a very easy way to get exactly what you want.
         </p>
-        <h2 className="h4">Our Vision</h2>
+        <h2 className="h4">Key/Unique Features:</h2>
         <p className="b1">
-          Delivering trustworthy experiences that you cherish for a lifetime.
+          *Enhanced visibility of the website for colorblind persons. <br />
+          *Owner verification is also provided in addition with tenent verification. <br />
+          *Faster website compared to other websites for renting and housing.
         </p>
-        <h2 className="h4">Our Mission</h2>
+        <h2 className="h4">Aim</h2>
         <p className="b1">
           To be the first choice for our consumers and partners in their journey
           of discovering, renting, buying, selling and financing a home. We do

@@ -58,8 +58,8 @@ class News extends Component {
   render() {
     return (
       <section className="news-page">
-        <h1 className="h3">News and Articles</h1>
-        <p className="b1">Read what's happening in Real Estate</p>
+        <h1 className="h3">News Segment</h1>
+        <p className="b1">Read things happening in Real Estate</p>
         {this.state.news.map((newsItem) => (
           <div className="list-item">
             <NewsItem news={newsItem} />

@@ -24,7 +24,7 @@ class Basic extends Component {
         <div className="flex">
           <label>
             <input type="radio" name="property-purpose" id="" />
-            Living
+            Housing
           </label>
           <label>
             <input type="radio" name="property-purpose" id="" />
@@ -35,11 +35,11 @@ class Basic extends Component {
         <div className="flex">
           <label>
             <input type="radio" name="property-type" id="" />
-            Apartment
+            Apartment/House
           </label>
           <label>
             <input type="radio" name="property-type" id="" />
-            Independent House / Floor
+            Independent (House / Floor)
           </label>
           <label>
             <input type="radio" name="property-type" id="" />

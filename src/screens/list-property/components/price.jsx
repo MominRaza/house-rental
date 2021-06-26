@@ -21,11 +21,11 @@ class Price extends Component {
         <div className="flex">
           <label>
             <input type="radio" name="price-range" />
-            Negosiable
+            Negotiable
           </label>
           <label>
             <input type="radio" name="price-range" />
-            Non-negosiable
+            Non-negotiable
           </label>
         </div>
         <div className="flex">
@@ -55,7 +55,7 @@ class Price extends Component {
             <input type="number" name="rent" />
           </label>
         </div>
-        <p>Rent Includes:</p>
+        <p>Rent Includes:(Optional)</p>
         <div className="flex">
           <label>
             <input type="checkbox" name="rent-includes" />
@@ -74,7 +74,7 @@ class Price extends Component {
             Maintainence Bill
           </label>
         </div>
-        <p>Rent Excludes:</p>
+        <p>Rent Excludes:(Optional)</p>
         <div className="flex">
           <label>
             <input type="checkbox" name="rent-excludes" />
@@ -137,7 +137,7 @@ class Price extends Component {
           </label>
           <label>
             <input type="checkbox" name="property-perks" />
-            Lampboard
+            Cupboard
           </label>
         </div>
         <div className="flex submit">

@@ -14,13 +14,13 @@ class Address extends Component {
         </div>
         <div className="flex">
           <label>
-            Building/House No./Project/Society(Mandatry)
+            Building/House No./Project/Society
             <input type="text" name="building" />
           </label>
         </div>
         <div className="flex">
           <label>
-            Locelity
+            Locality
             <input type="text" name="locelity" />
           </label>
         </div>
@@ -34,7 +34,7 @@ class Address extends Component {
             <input type="text" name="floor" />
           </label>
           <label className="flex-item">
-            Total Floor
+            Total Floors
             <input type="text" name="total-floor" />
           </label>
         </div>

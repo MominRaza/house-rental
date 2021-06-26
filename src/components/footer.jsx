@@ -12,7 +12,7 @@ class Footer extends Component {
           <Link to="/">
             <img src={logo} alt="House Rental" className="logo" />
           </Link>
-          <p className="b2 copy">&copy; 2012-21 Locon Solutions Pvt. Ltd.</p>
+          <p className="b2 copy">&copy; 2020-21 HouseRental Pvt. Ltd.</p>
         </div>
         <div className="grid-item">
           <p className="s1">COMPANY</p>
@@ -49,13 +49,13 @@ class Footer extends Component {
             </li>
             <li>
               <Link to="#" className="b2">
-                Sitemap
+                Head Office
               </Link>
             </li>
           </ul>
         </div>
         <div className="grid-item">
-          <p className="s1">FOLLOW</p>
+          <p className="s1">FOLLOW US</p>
           <ul>
             <li>
               <Link to="#" className="b2">
