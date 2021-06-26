@@ -19,6 +19,12 @@ import News from "./screens/news";
 import Privacy from "./screens/privacy";
 import Terms from "./screens/terms";
 import Favourites from "./screens/favourites";
+import RentPayment from "./screens/rentPayment";
+import RentAgreement from "./screens/rentAgreement";
+import PackersMovers from "./screens/packersMovers";
+import TenantVerification from "./screens/tenantVerification";
+import OwnerVerification from "./screens/ownerVerification";
+import EcoManagement from "./screens/ecoManagement";
 
 class App extends Component {
   state = {
@@ -167,6 +173,30 @@ class App extends Component {
           <Route path="/list-property">
             <Header onLoginToggle={this.toggleLogin} />
             <ListProperty />
+          </Route>
+          <Route path="/rent-payment">
+            <Header onLoginToggle={this.toggleLogin} />
+            <RentPayment />
+          </Route>
+          <Route path="/rent-agreement">
+            <Header onLoginToggle={this.toggleLogin} />
+            <RentAgreement />
+          </Route>
+          <Route path="/packers-and-movers">
+            <Header onLoginToggle={this.toggleLogin} />
+            <PackersMovers />
+          </Route>
+          <Route path="/tenant-verification">
+            <Header onLoginToggle={this.toggleLogin} />
+            <TenantVerification />
+          </Route>
+          <Route path="/owner-verification">
+            <Header onLoginToggle={this.toggleLogin} />
+            <OwnerVerification />
+          </Route>
+          <Route path="/eco-management">
+            <Header onLoginToggle={this.toggleLogin} />
+            <EcoManagement />
           </Route>
           <Route path="*">
             <Header onLoginToggle={this.toggleLogin} />
