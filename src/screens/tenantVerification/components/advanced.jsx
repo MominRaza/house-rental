@@ -6,7 +6,7 @@ class Advanced extends Component {
     return (
       <>
         <h3 className="h4">Tenant details for Advanced plan</h3>
-        <form action="#" className="card">
+        <form action="#" className="card left">
           <label>
             Tenant Name:
             <input type="text" name="tenant-name" />
