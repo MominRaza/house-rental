@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
-import payRent from "../../../images/payRent.svg";
-import rentAgreement from "../../../images/rentAgreement.svg";
-import movers from "../../../images/movers.svg";
-import tenantVerification from "../../../images/tenantVerification.svg";
-import furniture from "../../../images/furniture.svg";
-import propertyManagement from "../../../images/propertyManagement.svg";
+import payRent from "../../../images/payRent.png";
+import rentAgreement from "../../../images/rentAgreement.png";
+import movers from "../../../images/movers.png";
+import tenantVerification from "../../../images/tenantVerification.png";
+import furniture from "../../../images/ownerVerification.png";
+import propertyManagement from "../../../images/ecoManagement.png";
 
 class HousingSection extends Component {
   state = {};
