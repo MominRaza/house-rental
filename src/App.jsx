@@ -23,7 +23,7 @@ import Favourites from "./screens/favourites";
 import RentPayment from "./screens/rentPayment/rentPayment";
 import RentAgreement from "./screens/rentAgreement";
 import PackersMovers from "./screens/packersMovers";
-import TenantVerification from "./screens/tenantVerification";
+import TenantVerification from "./screens/tenantVerification/tenantVerification";
 import OwnerVerification from "./screens/ownerVerification";
 import EcoManagement from "./screens/ecoManagement";
 
