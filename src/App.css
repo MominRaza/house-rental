@@ -361,6 +361,7 @@ header:not(.home-page) {
   margin-bottom: 30px;
 }
 .packers img {
+  max-width: 300px;
   margin-right: 30px;
 }
 .packers .btn {
@@ -377,7 +378,25 @@ header:not(.home-page) {
 .packers .ratings span:last-child {
   margin-left: 5px;
 }
-
+.packers .contact-d {
+  font-weight: bold;
+  margin: 10px 0;
+}
+.packers .contact a,
+.packers .contact span {
+  display: inline-block;
+  color: black;
+  text-decoration: none;
+  white-space: nowrap;
+  margin-bottom: 10px;
+}
+.packers .contact i {
+  margin-right: 10px;
+}
+.packers .contact a:not(:first-child),
+.packers .contact i:not(:first-child) {
+  margin-left: 20px;
+}
 .tenant-verify {
   max-width: 1000px;
   margin: 50px auto;

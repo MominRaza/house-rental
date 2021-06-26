@@ -13,6 +13,18 @@ class PackersMovers extends Component {
           <div>
             <h2 className="h4">The Packers Movers</h2>
             <p className="s1">Relation is easy now</p>
+            <p className="contact-d">Contact Details</p>
+            <p className="contact">
+              <a href="tel:+916776436549">
+                <i className="material-icons">phone</i>+91 67764 36549
+              </a>
+              <a href="mailto:emailme@mycompany.com">
+                <i className="material-icons">email</i>emailme@mycompany.com
+              </a>
+              <span>
+                <i className="material-icons">place</i>My City 430089 My Country
+              </span>
+            </p>
             <p className="ratings">
               <span>Ratings:</span>
               <span>
@@ -33,6 +45,18 @@ class PackersMovers extends Component {
           <div>
             <h2 className="h4">The Packers Movers</h2>
             <p className="s1">Relation is easy now</p>
+            <p className="contact-d">Contact Details</p>
+            <p className="contact">
+              <a href="tel:+916776436549">
+                <i className="material-icons">phone</i>+91 67764 36549
+              </a>
+              <a href="mailto:emailme@mycompany.com">
+                <i className="material-icons">email</i>emailme@mycompany.com
+              </a>
+              <span>
+                <i className="material-icons">place</i>My City 430089 My Country
+              </span>
+            </p>
             <p className="ratings">
               <span>Ratings:</span>
               <span>
@@ -53,6 +77,18 @@ class PackersMovers extends Component {
           <div>
             <h2 className="h4">The Packers Movers</h2>
             <p className="s1">Relation is easy now</p>
+            <p className="contact-d">Contact Details</p>
+            <p className="contact">
+              <a href="tel:+916776436549">
+                <i className="material-icons">phone</i>+91 67764 36549
+              </a>
+              <a href="mailto:emailme@mycompany.com">
+                <i className="material-icons">email</i>emailme@mycompany.com
+              </a>
+              <span>
+                <i className="material-icons">place</i>My City 430089 My Country
+              </span>
+            </p>
             <p className="ratings">
               <span>Ratings:</span>
               <span>
@@ -73,6 +109,18 @@ class PackersMovers extends Component {
           <div>
             <h2 className="h4">The Packers Movers</h2>
             <p className="s1">Relation is easy now</p>
+            <p className="contact-d">Contact Details</p>
+            <p className="contact">
+              <a href="tel:+916776436549">
+                <i className="material-icons">phone</i>+91 67764 36549
+              </a>
+              <a href="mailto:emailme@mycompany.com">
+                <i className="material-icons">email</i>emailme@mycompany.com
+              </a>
+              <span>
+                <i className="material-icons">place</i>My City 430089 My Country
+              </span>
+            </p>
             <p className="ratings">
               <span>Ratings:</span>
               <span>
