@@ -1,6 +1,10 @@
 .logo {
   height: 40px;
 }
+.home-page .logo{
+  height: 50px;
+  margin-top: 30px;
+}
 header:not(.home-page) {
   height: 56px;
 }
