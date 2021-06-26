@@ -6,8 +6,8 @@ class SearchSection extends Component {
   render() {
     return (
       <section className="home center">
-        <h1 className="h3">Properties to buy in Lucknow</h1>
-        <h2 className="h5">Yahan Search Khatam Karo</h2>
+        <h1 className="h3">Buy properties in Lucknow</h1>
+        <h2 className="h5">Choose your quality life</h2>
         <div className="card bg-dark">
           <div className="tab">
             <NavLink
@@ -60,7 +60,7 @@ class SearchSection extends Component {
               type="search"
               name="search"
               id="search"
-              placeholder="Search for locality, landmark, project, or builder"
+              placeholder="Search for locality, landmark, area, or builder"
             />
             <button type="submit" className="btn primary lg icon-l">
               <i className="material-icons">search</i>
