@@ -28,7 +28,7 @@ class Advanced extends Component {
             <input type="text" name="pan-number" />
           </label>
           <label>
-            Tenant Father Name:
+            Tenant Father's Name:
             <input type="text" name="tenant-father" />
           </label>
           <p>Tenant Permanent Address</p>
