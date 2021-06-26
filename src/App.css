@@ -1,7 +1,7 @@
 .logo {
   height: 40px;
 }
-.home-page .logo{
+.home-page .logo {
   height: 50px;
   margin-top: 30px;
 }
@@ -271,6 +271,9 @@ header:not(.home-page) {
   max-width: 1000px;
   margin: 20px auto;
   padding: 30px 0;
+}
+.news-page .list-item {
+  margin-bottom: 16px;
 }
 .news-page h1 {
   margin-bottom: 10px;
