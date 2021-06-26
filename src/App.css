@@ -345,6 +345,10 @@ header:not(.home-page) {
 .card.payment .flex {
   overflow: hidden;
 }
+.card.payment p {
+  margin-top: 30px;
+  font-weight: bold;
+}
 
 .packers {
   max-width: 1000px;
