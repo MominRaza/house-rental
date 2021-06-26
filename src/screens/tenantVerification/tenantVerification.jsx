@@ -8,7 +8,7 @@ class TenantVerification extends Component {
   state = {};
   render() {
     return (
-      <section className="tenant-verify">
+      <section className="tenant-verify center">
         <h1 className="h3">Tenant Verification</h1>
         <p>
           Choose a plan
@@ -19,11 +19,11 @@ class TenantVerification extends Component {
           <i className="material-icons">chevron_right</i>
           Get Verification Report in 4-5 days
         </p>
-        <h3 className="h4">Choos a plan</h3>
-        <div className="flex">
+        <h3 className="h4">Choose a plan</h3>
+        <div className="flex choose">
           <NavLink
             to="/tenant-verification/basic"
-            className="flex-item card"
+            className="flex-item card rd-4"
             activeClassName="active"
           >
             <p className="h6">Basic</p>
@@ -36,7 +36,7 @@ class TenantVerification extends Component {
           </NavLink>
           <NavLink
             to="/tenant-verification/advanced"
-            className="flex-item card"
+            className="flex-item card rd-4"
             activeClassName="active"
           >
             <p className="h6">Advanced</p>

@@ -377,3 +377,51 @@ header:not(.home-page) {
 .packers .ratings span:last-child {
   margin-left: 5px;
 }
+
+.tenant-verify {
+  max-width: 1000px;
+  margin: 50px auto;
+}
+.tenant-verify h1 {
+  margin-bottom: 30px;
+}
+.tenant-verify h3 {
+  margin: 20px 0;
+  margin-top: 40px;
+}
+.tenant-verify .choose {
+  max-width: 660px;
+  margin: 10px auto;
+  gap: 40px;
+  overflow: hidden;
+  padding: 20px;
+}
+.tenant-verify .choose .flex-item {
+  padding: 20px;
+}
+.tenant-verify .choose .flex-item.active {
+  transform: scale(1.1);
+}
+.tenant-verify .choose .s1 {
+  margin-top: 6px;
+  margin-bottom: 20px;
+}
+.tenant-verify .choose i {
+  margin-right: 10px;
+}
+.tenant-verify .choose .btn {
+  margin-top: 20px;
+}
+.tenant-verify form.card {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+}
+.tenant-verify form.card p {
+  font-weight: bold;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+.tenant-verify form.card .flex {
+  overflow: hidden;
+}
