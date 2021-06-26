@@ -71,7 +71,7 @@ class Price extends Component {
           </label>
           <label>
             <input type="checkbox" name="rent-includes" />
-            Maintainence Bill
+            Maintenance Bill
           </label>
         </div>
         <p>Rent Excludes:(Optional)</p>
@@ -90,7 +90,7 @@ class Price extends Component {
           </label>
           <label>
             <input type="checkbox" name="rent-excludes" />
-            Maintainence Bill
+            Maintenance Bill
           </label>
         </div>
         <p>Property Perks:</p>
@@ -125,7 +125,7 @@ class Price extends Component {
           </label>
           <label>
             <input type="checkbox" name="property-perks" />
-            Refrigiretor
+            Refrigerator
           </label>
           <label>
             <input type="checkbox" name="property-perks" />
