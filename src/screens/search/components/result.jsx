@@ -6,9 +6,11 @@ class Result extends Component {
     const property = this.props.property;
     return (
       <div className="list-item">
-        <img src={property["propertyImageUrl"]} alt="Result 1" />
+        <div className="property-img">
+          <img src={property["propertyImageUrl"]} alt="Result 1" />
+        </div>
         <div>
-          <div className="list-item">
+          <div className="list-item price">
             <div className="ts-wraper">
               <p className="price h6">{property["price"]}</p>
             </div>
@@ -28,7 +30,7 @@ class Result extends Component {
             {property["details"]}
             <a href={"/property/" + property["id"]}>Read more</a>
           </p>
-          <div className="list-item">
+          <div className="list-item user">
             <div className="leading">
               <img
                 src={property["userImageUrl"]}
