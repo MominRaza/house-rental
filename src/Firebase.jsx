@@ -41,13 +41,22 @@ function Firebase() {
       setProperties(properties);
     });
   }
+  function addAddress(newAddress) {
+    const propertiesRef = firestore.collection("properties");
+    propertiesRef
+      .doc()
+      .set(newAddress)
+      .catch((err) => {
+        console.error(err);
+      });
+  }
 
   useEffect(() => {
     getNews();
     getProperties();
   }, []);
 
-  return <App news={news} properties={properties} />;
+  return <App news={news} properties={properties} addAddress={addAddress} />;
 }
 
 export default Firebase;

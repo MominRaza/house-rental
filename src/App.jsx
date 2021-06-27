@@ -183,7 +183,7 @@ class App extends Component {
             <Favourites />
           </Route>
           <Route path="/list-property">
-            <ListProperty />
+            <ListProperty addAddress={this.props.addAddress} />
           </Route>
           <Route path="/rent-payment">
             <RentPayment />

@@ -5,7 +5,7 @@ import Price from "./components/price";
 import Address from "./components/address";
 import PhotosVideos from "./components/photosVideos";
 
-function ListProperty() {
+function ListProperty(props) {
   let match = useRouteMatch();
 
   return (
@@ -45,13 +45,13 @@ function ListProperty() {
 
       <Switch>
         <Route exact path={match.path}>
-          <Basic />
+          <Basic addAddress={props.addAddress} />
         </Route>
         <Route path={`${match.path}/price`}>
           <Price />
         </Route>
         <Route path={`${match.path}/address`}>
-          <Address />
+          <Address addAddress={props.addAddress} />
         </Route>
         <Route path={`${match.path}/photos-videos`}>
           <PhotosVideos />
