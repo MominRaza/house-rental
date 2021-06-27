@@ -19,6 +19,7 @@ const firestore = firebase.firestore();
 
 function Firebase() {
   const [news, setNews] = useState([]);
+  const [properties, setProperties] = useState([]);
 
   function getNews() {
     const newsRef = firestore.collection("news");
@@ -30,12 +31,23 @@ function Firebase() {
       setNews(news);
     });
   }
+  function getProperties() {
+    const propertiesRef = firestore.collection("properties");
+    propertiesRef.onSnapshot((querySnapshot) => {
+      const properties = [];
+      querySnapshot.forEach((doc) => {
+        properties.push(doc.data());
+      });
+      setProperties(properties);
+    });
+  }
 
   useEffect(() => {
     getNews();
+    getProperties();
   }, []);
 
-  return <App news={news} />;
+  return <App news={news} properties={properties} />;
 }
 
 export default Firebase;

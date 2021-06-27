@@ -153,7 +153,7 @@ class App extends Component {
             <Home news={this.props.news} />
           </Route>
           <Route path="/search">
-            <Search properties={this.state.properties} />
+            <Search properties={this.props.properties} />
           </Route>
           <Route path="/login">
             <LoginScreen />
