@@ -10,7 +10,7 @@ class News extends Component {
         <h1 className="h3">News Segment</h1>
         <p className="b1">Read things happening in Real Estate</p>
         {this.props.news.map((newsItem) => (
-          <div className="list-item">
+          <div key={newsItem["id"]} className="list-item">
             <NewsItem news={newsItem} />
           </div>
         ))}

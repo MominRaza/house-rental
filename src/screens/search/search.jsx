@@ -12,7 +12,7 @@ class Search extends Component {
         <Filter />
         <div className="list results">
           {properties.map((property) => (
-            <Result property={property} />
+            <Result key={property["id"]} property={property} />
           ))}
         </div>
       </>

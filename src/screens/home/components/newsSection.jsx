@@ -12,7 +12,7 @@ class NewsSection extends Component {
           <p>Read things happening in Real Estate</p>
           <div className="flex">
             {this.props.news.map((newsItem) => (
-              <NewsItem news={newsItem} />
+              <NewsItem key={newsItem["id"]} news={newsItem} />
             ))}
           </div>
         </div>
