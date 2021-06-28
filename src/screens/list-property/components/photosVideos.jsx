@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Progress from "./progress";
+import { storage } from "../../../firebase_config";
 
 export default function PhotosVideos() {
   const [image, setImage] = useState(null);
@@ -9,17 +10,19 @@ export default function PhotosVideos() {
     let selectedImage = e.target.files[0];
     if (selectedImage) {
       setImage(selectedImage);
+      selectedImage = null;
     } else {
       setImage(null);
     }
   };
 
-  const removeFile = (storageRef) => {
-    storageRef
+  const removeFile = (fileName) => {
+    storage
+      .ref(fileName)
       .delete()
       .then(() => {
         let urls = imageUrls;
-        urls.filter((url) => url.storageRef != storageRef);
+        urls = urls.filter((url) => url.fileName != fileName);
         setImageUrls(urls);
       })
       .catch((error) => {});
@@ -38,10 +41,10 @@ export default function PhotosVideos() {
       <div className="flex">
         {imageUrls.map((url) => (
           <div className="uploaded-file">
-            <img src={url.url} />
+            <img src={url.url} alt="" />
             <button
               className="btn btn-o danger sm icon-o"
-              onClick={() => removeFile(url.storageRef)}
+              onClick={() => removeFile(url.fileName)}
             >
               <div className="material-icons md-18">delete</div>
             </button>

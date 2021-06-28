@@ -7,9 +7,8 @@ const useFile = (file) => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    const storageRef = storage.ref(
-      file.type + "-" + file.size + "-" + file.name
-    );
+    const fileName = file.type + "-" + file.size + "-" + file.name;
+    const storageRef = storage.ref(fileName);
 
     storageRef.put(file).on(
       "state_changed",
@@ -22,7 +21,7 @@ const useFile = (file) => {
       },
       async () => {
         const url = await storageRef.getDownloadURL();
-        setUrl({ url, storageRef });
+        setUrl({ url, fileName });
       }
     );
   }, [file]);

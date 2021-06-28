@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import useFile from "../../../hooks/uploadFile";
 
 export default function Progress({ file, setFile, getImageUrl }) {
-  const { progress, error, url, storageRef } = useFile(file);
+  const { progress, url } = useFile(file);
   useEffect(() => {
     if (url.url) {
       setFile(null);
@@ -10,5 +10,5 @@ export default function Progress({ file, setFile, getImageUrl }) {
     }
   }, [url.url]);
 
-  return <div>Uploading: {progress}%</div>;
+  return <div>Uploading: {Math.trunc(progress)}%</div>;
 }
