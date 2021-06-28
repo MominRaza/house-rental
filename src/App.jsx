@@ -153,7 +153,7 @@ class App extends Component {
             <Home />
           </Route>
           <Route path="/search">
-            <Search properties={this.props.properties} />
+            <Search />
           </Route>
           <Route path="/login">
             <LoginScreen />

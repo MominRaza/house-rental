@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import App from "./App";
 
 import "firebase/firestore";
@@ -6,18 +6,6 @@ import "firebase/firestore";
 import { firestore } from "./firebase_config";
 
 function Firebase() {
-  const [properties, setProperties] = useState([]);
-
-  function getProperties() {
-    const propertiesRef = firestore.collection("properties");
-    propertiesRef.onSnapshot((querySnapshot) => {
-      const properties = [];
-      querySnapshot.forEach((doc) => {
-        properties.push(doc.data());
-      });
-      setProperties(properties);
-    });
-  }
   function addAddress(newAddress) {
     const propertiesRef = firestore.collection("properties");
     propertiesRef
@@ -28,11 +16,7 @@ function Firebase() {
       });
   }
 
-  useEffect(() => {
-    getProperties();
-  }, []);
-
-  return <App properties={properties} addAddress={addAddress} />;
+  return <App addAddress={addAddress} />;
 }
 
 export default Firebase;

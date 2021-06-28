@@ -3,7 +3,7 @@ import React, { Component } from "react";
 class Result extends Component {
   state = {};
   render() {
-    const property = this.props.property;
+    const property = this.props.property.data;
     return (
       <div className="list-item">
         <div className="property-img">
