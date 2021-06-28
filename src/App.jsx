@@ -150,7 +150,7 @@ class App extends Component {
         </Switch>
         <Switch>
           <Route exact path="/">
-            <Home news={this.props.news} />
+            <Home />
           </Route>
           <Route path="/search">
             <Search properties={this.props.properties} />
@@ -168,10 +168,10 @@ class App extends Component {
             <Contact />
           </Route>
           <Route path="/news-and-articles">
-            <News news={this.props.news} />
+            <News />
           </Route>
           <Route path="/news">
-            <SingleNews news={this.props.news} />
+            <SingleNews />
           </Route>
           <Route path="/privacy-policy">
             <Privacy />

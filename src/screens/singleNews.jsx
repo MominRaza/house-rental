@@ -1,24 +1,37 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { matchPath, useLocation } from "react-router";
+import "firebase/firestore";
 
-function SingleNews(props) {
+import { firestore } from "../firebase_config";
+
+export default function SingleNews() {
   const match = matchPath(useLocation().pathname, { path: "/news/:id" });
-  const singleNews = props.news.find((news) => {
-    return news.id.toString() === match.params["id"];
-  });
+
+  const [news, setNews] = useState([]);
+
+  const getNews = () => {
+    firestore
+      .collection("news")
+      .doc(match.params["id"])
+      .onSnapshot((querySnapshot) => {
+        setNews(querySnapshot.data());
+      });
+  };
+
+  useEffect(() => {
+    getNews();
+  }, []);
 
   return (
     <section className="single-news">
-      <h1 className="h4">{singleNews["title"]}</h1>
+      <h1 className="h4">{news["title"]}</h1>
       <div className="card rd-4">
-        <img src={"../" + singleNews["imageUrl"]} alt={singleNews["title"]} />
+        <img src={"../" + news["imageUrl"]} alt={news["title"]} />
         <p
           className="b1"
-          dangerouslySetInnerHTML={{ __html: singleNews["news"] }}
+          dangerouslySetInnerHTML={{ __html: news["news"] }}
         ></p>
       </div>
     </section>
   );
 }
-
-export default SingleNews;

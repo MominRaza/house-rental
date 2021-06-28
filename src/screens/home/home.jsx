@@ -12,7 +12,7 @@ class Home extends Component {
         <SearchSection />
         <HousingSection />
         <FeaturedSection />
-        <NewsSection news={this.props.news} />
+        <NewsSection />
       </>
     );
   }
