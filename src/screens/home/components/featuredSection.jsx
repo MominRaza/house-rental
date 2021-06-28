@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
-import ready from "../../../images/ready.jpg";
-import townships from "../../../images/hotels.jpg";
-import luxury from "../../../images/farmhouse.jpg";
-import affordable from "../../../images/affordable.jpg";
-import hour from "../../../images/hour.jpg";
+import ready from "../../../images/ready.webp";
+import townships from "../../../images/hotels.webp";
+import luxury from "../../../images/farmhouse.webp";
+import affordable from "../../../images/affordable.webp";
+import hour from "../../../images/hour.webp";
 
 class FeaturedSection extends Component {
   state = {};

@@ -26,7 +26,7 @@ header:not(.home-page) {
 }
 .home {
   height: 60vh;
-  background-image: url(./images/defaultBanner.jpg);
+  background-image: url(./images/defaultBanner.webp);
   background-size: cover;
   padding-top: 80px;
   color: white;
