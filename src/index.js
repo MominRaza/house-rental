@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import Firebase from "./Firebase";
+import App from "./App";
 import "./App.css";
 
-ReactDOM.render(<Firebase />, document.getElementById("root"));
+ReactDOM.render(<App />, document.getElementById("root"));

@@ -9,15 +9,12 @@ export default function News() {
   const [news, setNews] = useState([]);
 
   const getNews = () => {
-    firestore.collection("news").onSnapshot((querySnapshot) => {
-      setNews(
-        querySnapshot.docs.map((doc) => {
-          return {
-            id: doc.id,
-            data: doc.data(),
-          };
-        })
-      );
+    firestore.collection("news").onSnapshot((snap) => {
+      let documents = [];
+      snap.forEach((doc) => {
+        documents.push({ ...doc.data(), id: doc.id });
+      });
+      setNews(documents);
     });
   };
 

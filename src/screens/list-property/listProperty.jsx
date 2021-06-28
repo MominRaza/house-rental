@@ -5,8 +5,20 @@ import Price from "./components/price";
 import Address from "./components/address";
 import PhotosVideos from "./components/photosVideos";
 
+import { firestore } from "../../firebase_config";
+
 function ListProperty(props) {
   let match = useRouteMatch();
+
+  function addAddress(newAddress) {
+    const propertiesRef = firestore.collection("properties");
+    propertiesRef
+      .doc()
+      .set(newAddress)
+      .catch((err) => {
+        console.error(err);
+      });
+  }
 
   return (
     <section className="list-property center">
@@ -45,16 +57,16 @@ function ListProperty(props) {
 
       <Switch>
         <Route exact path={match.path}>
-          <Basic addAddress={props.addAddress} />
+          <Basic addAddress={addAddress} />
         </Route>
         <Route path={`${match.path}/price`}>
-          <Price addAddress={props.addAddress} />
+          <Price addAddress={addAddress} />
         </Route>
         <Route path={`${match.path}/address`}>
-          <Address addAddress={props.addAddress} />
+          <Address addAddress={addAddress} />
         </Route>
         <Route path={`${match.path}/photos-videos`}>
-          <PhotosVideos addAddress={props.addAddress} />
+          <PhotosVideos addAddress={addAddress} />
         </Route>
       </Switch>
     </section>

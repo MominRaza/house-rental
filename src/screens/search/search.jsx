@@ -10,15 +10,12 @@ export default function Search() {
   const [properties, setProperties] = useState([]);
 
   const getProperties = () => {
-    firestore.collection("properties").onSnapshot((querySnapshot) => {
-      setProperties(
-        querySnapshot.docs.map((doc) => {
-          return {
-            id: doc.id,
-            data: doc.data(),
-          };
-        })
-      );
+    firestore.collection("properties").onSnapshot((snap) => {
+      let documents = [];
+      snap.forEach((doc) => {
+        documents.push({ ...doc.data(), id: doc.id });
+      });
+      setProperties(documents);
     });
   };
 
