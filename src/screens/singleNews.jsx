@@ -13,8 +13,8 @@ export default function SingleNews() {
     firestore
       .collection("news")
       .doc(match.params["id"])
-      .onSnapshot((querySnapshot) => {
-        setNews(querySnapshot.data());
+      .onSnapshot((snap) => {
+        setNews(snap.data());
       });
   };
 

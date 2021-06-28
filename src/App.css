@@ -557,3 +557,32 @@ header:not(.home-page) {
   margin-left: 20px;
   line-height: 1.8;
 }
+
+.upload-file input {
+  display: none;
+}
+.upload-file {
+  border-radius: 4px;
+  border: 1px black solid;
+  width: 120px;
+  height: 120px;
+  padding-top: 50px;
+  padding-left: 10px;
+}
+.uploaded-file {
+  border-radius: 4px;
+  border: 1px black solid;
+  width: 120px;
+  height: 120px;
+  overflow: hidden;
+  position: relative;
+}
+.uploaded-file img {
+  height: 100%;
+  width: 100%;
+}
+.uploaded-file button {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+}
