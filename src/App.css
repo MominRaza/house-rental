@@ -523,3 +523,37 @@ header:not(.home-page) {
 .filter .btn {
   margin: 8px 0;
 }
+
+.single-news,
+.terms {
+  max-width: 1000px;
+  margin: 50px auto;
+}
+.single-news h1,
+.terms h1 {
+  margin-bottom: 30px;
+}
+.single-news .card {
+  padding: 20px;
+  text-align: center;
+}
+.terms .card {
+  padding: 20px;
+}
+.single-news img {
+  min-width: 500px;
+  margin-bottom: 40px;
+}
+.single-news p,
+.terms p {
+  line-height: 1.5;
+  margin-bottom: 20px;
+  text-align: left;
+}
+.terms ul {
+  margin: 20px;
+}
+.terms li {
+  margin-left: 20px;
+  line-height: 1.8;
+}

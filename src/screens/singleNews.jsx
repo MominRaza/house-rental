@@ -9,9 +9,14 @@ function SingleNews(props) {
 
   return (
     <section className="single-news">
-      <h1 className="h3">{singleNews["title"]}</h1>
-      <img src={"../" + singleNews["imageUrl"]} alt={singleNews["title"]} />
-      <p dangerouslySetInnerHTML={{ __html: singleNews["news"] }}></p>
+      <h1 className="h4">{singleNews["title"]}</h1>
+      <div className="card rd-4">
+        <img src={"../" + singleNews["imageUrl"]} alt={singleNews["title"]} />
+        <p
+          className="b1"
+          dangerouslySetInnerHTML={{ __html: singleNews["news"] }}
+        ></p>
+      </div>
     </section>
   );
 }
