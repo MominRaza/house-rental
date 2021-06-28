@@ -48,13 +48,13 @@ function ListProperty(props) {
           <Basic addAddress={props.addAddress} />
         </Route>
         <Route path={`${match.path}/price`}>
-          <Price />
+          <Price addAddress={props.addAddress} />
         </Route>
         <Route path={`${match.path}/address`}>
           <Address addAddress={props.addAddress} />
         </Route>
         <Route path={`${match.path}/photos-videos`}>
-          <PhotosVideos />
+          <PhotosVideos addAddress={props.addAddress} />
         </Route>
       </Switch>
     </section>

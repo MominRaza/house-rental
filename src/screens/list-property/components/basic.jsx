@@ -45,7 +45,7 @@ function Basic(props) {
         <label>
           <input
             type="radio"
-            name="wantTo"
+            name="want"
             onChange={(e) => setWant("Rent")}
             required
           />
@@ -54,7 +54,7 @@ function Basic(props) {
         <label>
           <input
             type="radio"
-            name="wantTo"
+            name="want"
             onChange={(e) => setWant("PG / Co Living")}
             required
           />
