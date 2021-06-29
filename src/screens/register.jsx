@@ -54,7 +54,7 @@ class Register extends Component {
         </form>
         <p className="or">or</p>
         <p>
-          Allready have an account <Link to="/login">Login</Link>
+          Already have an account? <Link to="/login">Log In</Link>
         </p>
       </section>
     );
