@@ -35,15 +35,15 @@ class App extends Component {
   render() {
     return (
       <Router>
-        <Switch>
-          <Route exact path="/" component={HomeHeader} />
-          <Route path="/search" component={SearchHeader} />
-          <Route path="/login" component={LoginHeader} />
-          <Route path="/register" component={LoginHeader} />
-          <Route path="/user" component={LoginHeader} />
-          <Route path="*" component={Header} />
-        </Switch>
         <AuthProvider>
+          <Switch>
+            <Route exact path="/" component={HomeHeader} />
+            <Route path="/search" component={SearchHeader} />
+            <Route path="/login" component={LoginHeader} />
+            <Route path="/register" component={LoginHeader} />
+            <Route path="/user" component={LoginHeader} />
+            <Route path="*" component={Header} />
+          </Switch>
           <Switch>
             <Route exact path="/" component={Home} />
             <Route path="/search" component={Search} />
