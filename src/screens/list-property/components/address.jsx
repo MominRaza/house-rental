@@ -70,7 +70,7 @@ function Address(props) {
         <label className="flex-item">
           Flat No.
           <input
-            type="text"
+            type="number"
             name="flat"
             onChange={(e) => setFflat(e.target.value)}
             value={fflat}
@@ -80,7 +80,7 @@ function Address(props) {
         <label className="flex-item">
           Floor No.
           <input
-            type="text"
+            type="number"
             name="floor"
             onChange={(e) => setFloor(e.target.value)}
             value={floor}
@@ -90,7 +90,7 @@ function Address(props) {
         <label className="flex-item">
           Total Floors
           <input
-            type="text"
+            type="number"
             name="totalFloor"
             onChange={(e) => setTotalFloor(e.target.value)}
             value={totalFloor}

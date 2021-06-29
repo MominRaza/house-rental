@@ -3,10 +3,11 @@ import { useAuth } from "../../contexts/AuthContext";
 
 import { Link, useHistory } from "react-router-dom";
 
-export default function LoginScreen() {
+export default function Register() {
   const emailRef = useRef();
   const passwordRef = useRef();
-  const { login } = useAuth();
+  const passwordConfirmRef = useRef();
+  const { signup } = useAuth();
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
   const history = useHistory();
@@ -14,21 +15,25 @@ export default function LoginScreen() {
   async function handleSubmit(e) {
     e.preventDefault();
 
+    if (passwordRef.current.value !== passwordConfirmRef.current.value) {
+      return setError("Passwords do not match");
+    }
+
     try {
       setError("");
       setLoading(true);
-      await login(emailRef.current.value, passwordRef.current.value);
+      await signup(emailRef.current.value, passwordRef.current.value);
       history.push("/user");
     } catch {
-      setError("Failed to log in");
+      setError("Failed to create an account");
     }
 
     setLoading(false);
   }
 
   return (
-    <section className="login center">
-      <h1 className="h3">Login</h1>
+    <section className="register center">
+      <h1 className="h3">Register</h1>
       <form className="card left rd-4" onSubmit={handleSubmit}>
         {error && (
           <div className="card b-danger">
@@ -36,6 +41,24 @@ export default function LoginScreen() {
             {error}
           </div>
         )}
+        <label>
+          Full name:
+          <input
+            type="text"
+            name="fullName"
+            placeholder="Enter full name"
+            required
+          />
+        </label>
+        <label>
+          Mobile number:
+          <input
+            type="text"
+            name="mobileNumber"
+            placeholder="Enter mobile number"
+            required
+          />
+        </label>
         <label>
           Email address:
           <input
@@ -47,7 +70,7 @@ export default function LoginScreen() {
           />
         </label>
         <label>
-          Password:
+          Create password:
           <input
             type="password"
             name="password"
@@ -56,16 +79,31 @@ export default function LoginScreen() {
             required
           />
         </label>
+        <label>
+          Password confirmation:
+          <input
+            type="password"
+            name="password"
+            placeholder="Enter password"
+            ref={passwordConfirmRef}
+            required
+          />
+        </label>
+        <label>
+          <input type="checkbox" name="terms" id="terms" required />
+          Accept <Link to="/terms">terms</Link> and
+          <Link to="/conditions">conditions</Link>.
+        </label>
         <input
           type="submit"
-          value="Login"
+          value="Register"
           className="btn primary"
           disabled={loading}
         />
       </form>
       <p className="or">or</p>
       <p>
-        Need an account? <Link to="/register">Sign Up</Link>
+        Already have an account? <Link to="/login">Log In</Link>
       </p>
     </section>
   );
