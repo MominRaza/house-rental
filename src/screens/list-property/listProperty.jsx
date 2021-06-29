@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Switch, Route, useRouteMatch, NavLink } from "react-router-dom";
 import Basic from "./components/basic";
 import Price from "./components/price";
@@ -7,19 +7,40 @@ import PhotosVideos from "./components/photosVideos";
 
 import { firestore } from "../../firebase_config";
 
-function ListProperty(props) {
+function ListProperty() {
+  const [propertyData, setPropertyData] = useState([]);
+  const [error, setError] = useState("");
+
   let match = useRouteMatch();
 
-  function addAddress(newAddress) {
-    const propertiesRef = firestore.collection("properties");
-    propertiesRef
-      .doc()
-      .set(newAddress)
-      .catch((err) => {
-        console.error(err);
-      });
-  }
+  const getPropertyData = (data) => {
+    console.log(data);
+    let property = { ...propertyData, ...data };
+    setPropertyData(property);
+    console.log(property);
+  };
 
+  function listProperty() {
+    if (
+      propertyData.want &&
+      propertyData.price &&
+      propertyData.city &&
+      propertyData.imageUrls.length
+    ) {
+      const propertiesRef = firestore.collection("properties");
+      propertiesRef
+        .doc()
+        .set(propertyData)
+        .then(() => {
+          setPropertyData([]);
+        })
+        .catch((err) => {
+          console.error(err);
+        });
+    } else {
+      setError("Fill all the fields and save!");
+    }
+  }
   return (
     <section className="list-property center">
       <h1 className="h3">List Property</h1>
@@ -54,19 +75,32 @@ function ListProperty(props) {
           Photos/Videos
         </NavLink>
       </div>
-
+      {error && <span>{error}</span>}
       <Switch>
         <Route exact path={match.path}>
-          <Basic addAddress={addAddress} />
+          <Basic
+            propertyData={propertyData}
+            addPropertyData={getPropertyData}
+          />
         </Route>
         <Route path={`${match.path}/price`}>
-          <Price addAddress={addAddress} />
+          <Price
+            propertyData={propertyData}
+            addPropertyData={getPropertyData}
+          />
         </Route>
         <Route path={`${match.path}/address`}>
-          <Address addAddress={addAddress} />
+          <Address
+            propertyData={propertyData}
+            addPropertyData={getPropertyData}
+          />
         </Route>
         <Route path={`${match.path}/photos-videos`}>
-          <PhotosVideos addAddress={addAddress} />
+          <PhotosVideos
+            propertyData={propertyData}
+            addPropertyData={getPropertyData}
+            listProperty={listProperty}
+          />
         </Route>
       </Switch>
     </section>

@@ -1,12 +1,16 @@
 import React, { useState } from "react";
 import Progress from "./progress";
 import { storage } from "../../../firebase_config";
+import { Link } from "react-router-dom";
 
-export default function PhotosVideos() {
+export default function PhotosVideos(props) {
   const [image, setImage] = useState(null);
-  const [imageUrls, setImageUrls] = useState([]);
+  const [imageUrls, setImageUrls] = useState(
+    props.propertyData.imageUrls || []
+  );
   const [video, setVideo] = useState(null);
-  const [videoUrl, setVideoUrl] = useState([]);
+  const [videoUrl, setVideoUrl] = useState(props.propertyData.videoUrl || []);
+  const [error, setError] = useState("");
 
   const imageChangeHandler = (e) => {
     let selectedImage = e.target.files[0];
@@ -65,6 +69,7 @@ export default function PhotosVideos() {
   return (
     <div className="card left">
       <p>Photos</p>
+      {error && <span>{error}</span>}
       <div className="flex">
         {imageUrls.map((url) => (
           <div className="uploaded-file">
@@ -121,10 +126,27 @@ export default function PhotosVideos() {
         )}
       </div>
       <div className="flex submit">
-        <button type="submit" className="btn primary">
+        <button className="btn primary success" onClick={props.listProperty}>
           List Property
         </button>
-        <button className="btn secondary">Back</button>
+        <button
+          className="btn primary"
+          onClick={() => {
+            if (imageUrls.length) {
+              props.addPropertyData({
+                imageUrls,
+                videoUrl,
+              });
+            } else {
+              setError("Upload at least one image!");
+            }
+          }}
+        >
+          Save
+        </button>
+        <Link to="/list-property/address" className="btn secondary">
+          Back
+        </Link>
       </div>
     </div>
   );

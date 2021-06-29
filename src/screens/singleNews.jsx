@@ -20,6 +20,7 @@ export default function SingleNews() {
 
   useEffect(() => {
     getNews();
+    // eslint-disable-next-line
   }, []);
 
   return (

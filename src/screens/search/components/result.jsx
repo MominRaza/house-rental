@@ -7,7 +7,16 @@ class Result extends Component {
     return (
       <div className="list-item">
         <div className="property-img">
-          <img src={property["propertyImageUrl"]} alt="Result 1" />
+          <img
+            src={property.imageUrls[0].url}
+            alt={
+              property["propertyType"] +
+              " for " +
+              property["want"] +
+              " in " +
+              property["city"]
+            }
+          />
         </div>
         <div>
           <div className="list-item price">
@@ -19,13 +28,25 @@ class Result extends Component {
             </div>
           </div>
           <p className="type">
-            <b>{property["type"]}</b>
+            <b>{property["propertyType"]}</b>
             <span>
               {" "}
               for {property["want"]} in {property["city"]}
             </span>
           </p>
-          <p className="address">{property["address"]}</p>
+          <p className="address">
+            {property["city"] +
+              " " +
+              property["building"] +
+              " " +
+              property["locality"] +
+              " " +
+              property["fflat"] +
+              " " +
+              property["floor"] +
+              "/" +
+              property["totalFloor"]}
+          </p>
           <p className="details">
             {property["details"]}
             <a href={"/property/" + property["id"]}>Read more</a>

@@ -1,26 +1,32 @@
 import React, { useState } from "react";
+import { Link, useHistory } from "react-router-dom";
 
 function Address(props) {
-  const [city, setCity] = useState("");
-  const [building, setBuilding] = useState("");
-  const [locality, setLocality] = useState("");
-  const [flat, setFlat] = useState("");
-  const [floor, setFloor] = useState("");
-  const [totalFloor, setTotalFloor] = useState("");
+  const [city, setCity] = useState(props.propertyData.city || "");
+  const [building, setBuilding] = useState(props.propertyData.building || "");
+  const [locality, setLocality] = useState(props.propertyData.locality || "");
+  const [fflat, setFflat] = useState(props.propertyData.fflat || "");
+  const [floor, setFloor] = useState(props.propertyData.floor || "");
+  const [totalFloor, setTotalFloor] = useState(
+    props.propertyData.totalFloor || ""
+  );
+
+  const history = useHistory();
 
   return (
     <form
       className="card left"
       onSubmit={(event) => {
         event.preventDefault();
-        props.addAddress({
+        props.addPropertyData({
           city,
           building,
           locality,
-          flat,
+          fflat,
           floor,
           totalFloor,
         });
+        history.push("/list-property/photos-videos");
       }}
     >
       <p>Address:</p>
@@ -31,6 +37,7 @@ function Address(props) {
             type="text"
             name="city"
             onChange={(e) => setCity(e.target.value)}
+            value={city}
             required
           />
         </label>
@@ -42,6 +49,7 @@ function Address(props) {
             type="text"
             name="building"
             onChange={(e) => setBuilding(e.target.value)}
+            value={building}
             required
           />
         </label>
@@ -53,6 +61,7 @@ function Address(props) {
             type="text"
             name="locality"
             onChange={(e) => setLocality(e.target.value)}
+            value={locality}
             required
           />
         </label>
@@ -63,7 +72,8 @@ function Address(props) {
           <input
             type="text"
             name="flat"
-            onChange={(e) => setFlat(e.target.value)}
+            onChange={(e) => setFflat(e.target.value)}
+            value={fflat}
             required
           />
         </label>
@@ -73,6 +83,7 @@ function Address(props) {
             type="text"
             name="floor"
             onChange={(e) => setFloor(e.target.value)}
+            value={floor}
             required
           />
         </label>
@@ -82,15 +93,18 @@ function Address(props) {
             type="text"
             name="totalFloor"
             onChange={(e) => setTotalFloor(e.target.value)}
+            value={totalFloor}
             required
           />
         </label>
       </div>
       <div className="flex submit">
         <button type="submit" className="btn primary">
-          Continue
+          Save &amp; Continue
         </button>
-        <button className="btn secondary">Back</button>
+        <Link to="/list-property/price" className="btn secondary">
+          Back
+        </Link>
       </div>
     </form>
   );

@@ -1,23 +1,34 @@
 import React, { useState } from "react";
+import { useHistory } from "react-router-dom";
 
 function Basic(props) {
-  const [want, setWant] = useState("");
-  const [propertyPurpose, setPropertyPurpose] = useState("");
-  const [propertyType, setPropertyType] = useState("");
-  const [constructionStatus, setConstructionStatus] = useState("");
-  const [bhk, setBhk] = useState("");
-  const [bathroom, setBathroom] = useState("");
-  const [balcony, setBalcony] = useState("");
-  const [furnishType, setFurnishType] = useState("");
-  const [parking, setParking] = useState("");
-  const [area, setArea] = useState("");
+  const [want, setWant] = useState(props.propertyData.want || "");
+  const [propertyPurpose, setPropertyPurpose] = useState(
+    props.propertyData.propertyPurpose || ""
+  );
+  const [propertyType, setPropertyType] = useState(
+    props.propertyData.propertyType || ""
+  );
+  const [constructionStatus, setConstructionStatus] = useState(
+    props.propertyData.constructionStatus || ""
+  );
+  const [bhk, setBhk] = useState(props.propertyData.bhk || "");
+  const [bathroom, setBathroom] = useState(props.propertyData.bathroom || "");
+  const [balcony, setBalcony] = useState(props.propertyData.balcony || "");
+  const [furnishType, setFurnishType] = useState(
+    props.propertyData.furnishType || ""
+  );
+  const [parking, setParking] = useState(props.propertyData.parking || "");
+  const [area, setArea] = useState(props.propertyData.area || "");
+
+  const history = useHistory();
 
   return (
     <form
       className="card left"
       onSubmit={(event) => {
         event.preventDefault();
-        props.addAddress({
+        props.addPropertyData({
           want,
           propertyPurpose,
           propertyType,
@@ -29,6 +40,7 @@ function Basic(props) {
           parking,
           area,
         });
+        history.push("/list-property/price");
       }}
     >
       <p>I want to:</p>
@@ -38,6 +50,7 @@ function Basic(props) {
             type="radio"
             name="want"
             onChange={(e) => setWant("Sell")}
+            checked={want === "Sell"}
             required
           />
           Sell
@@ -47,6 +60,7 @@ function Basic(props) {
             type="radio"
             name="want"
             onChange={(e) => setWant("Rent")}
+            checked={want === "Rent"}
             required
           />
           Rent
@@ -56,6 +70,7 @@ function Basic(props) {
             type="radio"
             name="want"
             onChange={(e) => setWant("PG / Co Living")}
+            checked={want === "PG / Co Living"}
             required
           />
           PG / Co Living
@@ -68,6 +83,7 @@ function Basic(props) {
             type="radio"
             name="propertyPurpose"
             onChange={(e) => setPropertyPurpose("Housing")}
+            checked={propertyPurpose === "Housing"}
             required
           />
           Housing
@@ -77,6 +93,7 @@ function Basic(props) {
             type="radio"
             name="propertyPurpose"
             onChange={(e) => setPropertyPurpose("Business")}
+            checked={propertyPurpose === "Business"}
             required
           />
           Business
@@ -89,6 +106,7 @@ function Basic(props) {
             type="radio"
             name="propertyType"
             onChange={(e) => setPropertyType("Apartment/House")}
+            checked={propertyType === "Apartment/House"}
             required
           />
           Apartment/House
@@ -98,6 +116,7 @@ function Basic(props) {
             type="radio"
             name="propertyType"
             onChange={(e) => setPropertyType("Independent (House / Floor)")}
+            checked={propertyType === "Independent (House / Floor)"}
             required
           />
           Independent (House / Floor)
@@ -107,6 +126,7 @@ function Basic(props) {
             type="radio"
             name="propertyType"
             onChange={(e) => setPropertyType("Plot")}
+            checked={propertyType === "Plot"}
             required
           />
           Plot
@@ -116,6 +136,7 @@ function Basic(props) {
             type="radio"
             name="propertyType"
             onChange={(e) => setPropertyType("Agricultural Land")}
+            checked={propertyType === "Agricultural Land"}
             required
           />
           Agricultural Land
@@ -125,6 +146,7 @@ function Basic(props) {
             type="radio"
             name="propertyType"
             onChange={(e) => setPropertyType("Farm House")}
+            checked={propertyType === "Farm House"}
             required
           />
           Farm House
@@ -134,6 +156,7 @@ function Basic(props) {
             type="radio"
             name="propertyType"
             onChange={(e) => setPropertyType("Hotel")}
+            checked={propertyType === "Hotel"}
             required
           />
           Hotel
@@ -143,6 +166,7 @@ function Basic(props) {
             type="radio"
             name="propertyType"
             onChange={(e) => setPropertyType("Party Place")}
+            checked={propertyType === "Party Place"}
             required
           />
           Party Place
@@ -155,6 +179,7 @@ function Basic(props) {
             type="radio"
             name="constructionStatus"
             onChange={(e) => setConstructionStatus("Ready to move")}
+            checked={constructionStatus === "Ready to move"}
             required
           />
           Ready to move
@@ -164,6 +189,7 @@ function Basic(props) {
             type="radio"
             name="constructionStatus"
             onChange={(e) => setConstructionStatus("Under construction")}
+            checked={constructionStatus === "Under construction"}
             required
           />
           Under construction
@@ -176,6 +202,7 @@ function Basic(props) {
             type="radio"
             name="bhk"
             onChange={(e) => setBhk("Single Room")}
+            checked={bhk === "Single Room"}
             required
           />
           Single Room
@@ -185,6 +212,7 @@ function Basic(props) {
             type="radio"
             name="bhk"
             onChange={(e) => setBhk("1 BHK")}
+            checked={bhk === "1 BHK"}
             required
           />
           1 BHK
@@ -194,6 +222,7 @@ function Basic(props) {
             type="radio"
             name="bhk"
             onChange={(e) => setBhk("2 BHK")}
+            checked={bhk === "2 BHK"}
             required
           />
           2 BHK
@@ -203,6 +232,7 @@ function Basic(props) {
             type="radio"
             name="bhk"
             onChange={(e) => setBhk("3 BHK")}
+            checked={bhk === "3 BHK"}
             required
           />
           3 BHK
@@ -212,6 +242,7 @@ function Basic(props) {
             type="radio"
             name="bhk"
             onChange={(e) => setBhk("3+ BHK")}
+            checked={bhk === "3+ BHK"}
             required
           />
           3+ BHK
@@ -224,6 +255,7 @@ function Basic(props) {
             type="radio"
             name="bathroom"
             onChange={(e) => setBathroom("0")}
+            checked={bathroom === "0"}
             required
           />
           0
@@ -233,6 +265,7 @@ function Basic(props) {
             type="radio"
             name="bathroom"
             onChange={(e) => setBathroom("1")}
+            checked={bathroom === "1"}
             required
           />
           1
@@ -242,6 +275,7 @@ function Basic(props) {
             type="radio"
             name="bathroom"
             onChange={(e) => setBathroom("2")}
+            checked={bathroom === "2"}
             required
           />
           2
@@ -251,6 +285,7 @@ function Basic(props) {
             type="radio"
             name="bathroom"
             onChange={(e) => setBathroom("3")}
+            checked={bathroom === "3"}
             required
           />
           3
@@ -260,6 +295,7 @@ function Basic(props) {
             type="radio"
             name="bathroom"
             onChange={(e) => setBathroom("3+")}
+            checked={bathroom === "3+"}
             required
           />
           3+
@@ -272,6 +308,7 @@ function Basic(props) {
             type="radio"
             name="balcony"
             onChange={(e) => setBalcony("0")}
+            checked={balcony === "0"}
             required
           />
           0
@@ -281,6 +318,7 @@ function Basic(props) {
             type="radio"
             name="balcony"
             onChange={(e) => setBalcony("1")}
+            checked={balcony === "1"}
             required
           />
           1
@@ -290,6 +328,7 @@ function Basic(props) {
             type="radio"
             name="balcony"
             onChange={(e) => setBalcony("2")}
+            checked={balcony === "2"}
             required
           />
           2
@@ -299,6 +338,7 @@ function Basic(props) {
             type="radio"
             name="balcony"
             onChange={(e) => setBalcony("3")}
+            checked={balcony === "3"}
             required
           />
           3
@@ -308,6 +348,7 @@ function Basic(props) {
             type="radio"
             name="balcony"
             onChange={(e) => setBalcony("3+")}
+            checked={balcony === "3+"}
             required
           />
           3+
@@ -320,6 +361,7 @@ function Basic(props) {
             type="radio"
             name="furnishType"
             onChange={(e) => setFurnishType("Fully Furnished")}
+            checked={furnishType === "Fully Furnished"}
             required
           />
           Fully Furnished
@@ -329,6 +371,7 @@ function Basic(props) {
             type="radio"
             name="furnishType"
             onChange={(e) => setFurnishType("Semi Furnished")}
+            checked={furnishType === "Semi Furnished"}
             required
           />
           Semi Furnished
@@ -338,6 +381,7 @@ function Basic(props) {
             type="radio"
             name="furnishType"
             onChange={(e) => setFurnishType("Unfurnished")}
+            checked={furnishType === "Unfurnished"}
             required
           />
           Unfurnished
@@ -350,6 +394,7 @@ function Basic(props) {
             type="radio"
             name="parking"
             onChange={(e) => setParking("Covered")}
+            checked={parking === "Covered"}
             required
           />
           Covered
@@ -359,6 +404,7 @@ function Basic(props) {
             type="radio"
             name="parking"
             onChange={(e) => setParking("Uncovered")}
+            checked={parking === "Uncovered"}
             required
           />
           Uncovered
@@ -368,6 +414,7 @@ function Basic(props) {
             type="radio"
             name="parking"
             onChange={(e) => setParking("No parking")}
+            checked={parking === "No parking"}
             required
           />
           No parking
@@ -382,13 +429,18 @@ function Basic(props) {
             name="area"
             placeholder="Area of property"
             onChange={(e) => setArea(e.target.value)}
+            value={area}
             required
           />
           Sq-ft
         </label>
       </div>
       <div className="flex submit">
-        <input type="submit" value="Continue" className="btn primary" />
+        <input
+          type="submit"
+          value="Save &amp; Continue"
+          className="btn primary"
+        />
       </div>
     </form>
   );
