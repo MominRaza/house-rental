@@ -1,12 +1,12 @@
 import React, { useEffect } from "react";
 import useFile from "../../../hooks/uploadFile";
 
-export default function Progress({ file, setFile, getImageUrl }) {
+export default function Progress({ file, setFile, getFileUrl }) {
   const { progress, url } = useFile(file);
   useEffect(() => {
     if (url.url) {
       setFile(null);
-      getImageUrl(url);
+      getFileUrl(url);
     }
   }, [url.url]);
 
