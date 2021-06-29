@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import PrivateRoute from "./components/PrivateRoute";
+import PublicRoute from "./components/PublicRoute";
 
 import Header from "./components/header";
 import HomeHeader from "./screens/home/components/homeHeader";
@@ -27,7 +28,7 @@ import PackersMovers from "./screens/packersMovers";
 import TenantVerification from "./screens/tenantVerification/tenantVerification";
 import OwnerVerification from "./screens/ownerVerification";
 import EcoManagement from "./screens/ecoManagement";
-import { AuthProvider } from "./contexts/AuthContext";
+import { AuthProvider } from "./hooks/AuthContext";
 import User from "./screens/User";
 
 class App extends Component {
@@ -39,14 +40,15 @@ class App extends Component {
           <Route path="/search" component={SearchHeader} />
           <Route path="/login" component={LoginHeader} />
           <Route path="/register" component={LoginHeader} />
+          <Route path="/user" component={LoginHeader} />
           <Route path="*" component={Header} />
         </Switch>
         <AuthProvider>
           <Switch>
             <Route exact path="/" component={Home} />
             <Route path="/search" component={Search} />
-            <Route path="/login" component={LoginScreen} />
-            <Route path="/register" component={Register} />
+            <PublicRoute path="/login" component={LoginScreen} />
+            <PublicRoute path="/register" component={Register} />
             <PrivateRoute path="/user" component={User} />
             <Route path="/about-us" component={About} />
             <Route path="/contact-us" component={Contact} />
