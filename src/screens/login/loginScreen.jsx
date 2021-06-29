@@ -31,7 +31,7 @@ class LoginScreen extends Component {
         </form>
         <p className="or">or</p>
         <p>
-          Not have an account <Link to="/register">Register</Link>
+          Don't have an account?? <Link to="/register">Register</Link>
         </p>
       </section>
     );
