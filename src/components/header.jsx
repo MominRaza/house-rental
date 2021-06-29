@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
+import UserLogo from "./UserLogo";
+
 import logo from "../images/logo.png";
 
 class Header extends Component {
@@ -23,14 +25,7 @@ class Header extends Component {
             <Link to="/news-and-articles" className="btn btn-t white sm">
               News
             </Link>
-            <Link
-              to="#"
-              className="btn btn-t white sm icon-l"
-              onClick={this.props.onLoginToggle}
-            >
-              <i className="material-icons md-18">person_outline</i>
-              Login
-            </Link>
+            <UserLogo />
           </div>
         </nav>
       </header>
