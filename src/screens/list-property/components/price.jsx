@@ -19,18 +19,6 @@ function Price(props) {
   const [rentIncludes4, setRentIncludes4] = useState(
     property.rentIncludes4 || false
   );
-  const [rentExcludes1, setRentExcludes1] = useState(
-    property.rentExcludes1 || false
-  );
-  const [rentExcludes2, setRentExcludes2] = useState(
-    property.rentExcludes2 || false
-  );
-  const [rentExcludes3, setRentExcludes3] = useState(
-    property.rentExcludes3 || false
-  );
-  const [rentExcludes4, setRentExcludes4] = useState(
-    property.rentExcludes4 || false
-  );
   const [propertyPerks1, setPropertyPerks1] = useState(
     property.propertyPerks1 || false
   );
@@ -80,10 +68,6 @@ function Price(props) {
           rentIncludes2,
           rentIncludes3,
           rentIncludes4,
-          rentExcludes1,
-          rentExcludes2,
-          rentExcludes3,
-          rentExcludes4,
           propertyPerks1,
           propertyPerks2,
           propertyPerks3,
@@ -186,7 +170,7 @@ function Price(props) {
               />
             </label>
           </div>
-          <p>Rent Includes:(Optional)</p>
+          <p>Rent Includes:</p>
           <div className="flex">
             <label>
               <input
@@ -221,45 +205,6 @@ function Price(props) {
                 name="rentIncludes"
                 onChange={(e) => setRentIncludes4(!rentIncludes4)}
                 checked={rentIncludes4}
-              />
-              Maintenance Bill
-            </label>
-          </div>
-          <p>Rent Excludes:(Optional)</p>
-          <div className="flex">
-            <label>
-              <input
-                type="checkbox"
-                name="rentExcludes"
-                onChange={(e) => setRentExcludes1(!rentExcludes1)}
-                checked={rentExcludes1}
-              />
-              Electricity Bill
-            </label>
-            <label>
-              <input
-                type="checkbox"
-                name="rentExcludes"
-                onChange={(e) => setRentExcludes2(!rentExcludes2)}
-                checked={rentExcludes2}
-              />
-              Water Bill
-            </label>
-            <label>
-              <input
-                type="checkbox"
-                name="rentExcludes"
-                onChange={(e) => setRentExcludes3(!rentExcludes3)}
-                checked={rentExcludes3}
-              />
-              Parking Bill
-            </label>
-            <label>
-              <input
-                type="checkbox"
-                name="rentExcludes"
-                onChange={(e) => setRentExcludes4(!rentExcludes4)}
-                checked={rentExcludes4}
               />
               Maintenance Bill
             </label>
