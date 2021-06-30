@@ -1,8 +1,17 @@
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useHistory } from "react-router-dom";
 
 export default function SearchSection() {
   const [location, setLocation] = useState("Lucknow");
+  const [search, setSearch] = useState("");
+  const history = useHistory();
+
+  function handleSearch(e) {
+    e.preventDefault();
+    if (search) {
+      history.push("/search?search=" + search + "&location=" + location);
+    }
+  }
 
   return (
     <section className="home center">
@@ -45,7 +54,7 @@ export default function SearchSection() {
             PLOTS
           </NavLink>
         </div>
-        <form action="/search">
+        <form onSubmit={handleSearch}>
           <select name="location" onChange={(e) => setLocation(e.target.value)}>
             <option value="Lucknow">Lucknow</option>
             <option value="Mumbai">Mumbai</option>
@@ -61,6 +70,8 @@ export default function SearchSection() {
             name="search"
             id="search"
             placeholder="Search for locality, landmark, area, or builder"
+            onChange={(e) => setSearch(e.target.value)}
+            required
           />
           <button type="submit" className="btn primary lg icon-l">
             <i className="material-icons">search</i>
