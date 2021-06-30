@@ -15,10 +15,15 @@ header:not(.home-page) {
 .flex-item {
   text-decoration: none;
 }
+section {
+  padding-left: 10px;
+  padding-right: 10px;
+}
 .home {
-  height: 60vh;
+  padding-bottom: 1px;
   background-image: url(./images/defaultBanner.webp);
   background-size: cover;
+  background-position: center;
   padding-top: 80px;
   color: white;
 }
@@ -39,7 +44,7 @@ header:not(.home-page) {
 .home .card {
   background-color: rgba(0, 0, 0, 0.5);
   max-width: 900px;
-  margin: 40px auto;
+  margin: 40px auto 20px;
   padding: 20px 30px 30px;
   text-align: start;
 }
@@ -49,9 +54,6 @@ header:not(.home-page) {
 }
 .home .tab-item {
   border-color: white;
-}
-.home form {
-  display: flex;
 }
 .home select {
   flex: 1;
@@ -68,6 +70,7 @@ header:not(.home-page) {
   flex: 1;
   border-radius: 4;
   margin: 8px 0;
+  width: 100%;
 }
 .housing {
   margin: 50px auto;
@@ -594,6 +597,7 @@ header:not(.home-page) {
   border-width: 2px;
 }
 
+/* responsive */
 .menu-toggle {
   display: none;
 }
@@ -606,6 +610,9 @@ header:not(.home-page) {
     height: 50px;
     margin-left: 20px;
     margin-top: 30px;
+  }
+  .home form {
+    display: flex;
   }
 }
 @media (max-width: 768px) {

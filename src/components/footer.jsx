@@ -7,7 +7,7 @@ class Footer extends Component {
   state = {};
   render() {
     return (
-      <footer className="footer grid grid-4">
+      <footer className="footer grid grid-sm-laptop-4 grid-tablet-2">
         <div className="grid-item">
           <Link to="/">
             <img src={logo} alt="House Rental" className="logo" />
