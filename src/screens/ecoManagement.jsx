@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import eco1 from "../images/eco1.png";
+import eco1 from "../images/eco1.webp";
 
 class EcoManagement extends Component {
   state = {};
