@@ -23,11 +23,11 @@ export default function News() {
   }, []);
 
   return (
-    <section className="news-page">
+    <section className="news-page center">
       <h1 className="h3">News Segment</h1>
       <p className="b1">Read things happening in Real Estate</p>
       {news.map((newsItem) => (
-        <div key={newsItem["id"]} className="list-item">
+        <div key={newsItem["id"]} className="list-item left">
           <NewsItem news={newsItem} />
         </div>
       ))}
