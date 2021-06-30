@@ -1,36 +1,13 @@
-import React, { useState, useEffect } from "react";
-import "firebase/firestore";
+import React from "react";
+import { useLocation } from "react-router-dom";
+import DoSearch from "./DoSearch";
 
-import Result from "./components/result";
-import Filter from "./components/filter";
-
-import { firestore } from "../../firebase_config";
+function useQuery() {
+  return new URLSearchParams(useLocation().search);
+}
 
 export default function Search() {
-  const [properties, setProperties] = useState([]);
+  let query = useQuery();
 
-  const getProperties = () => {
-    firestore.collection("properties").onSnapshot((snap) => {
-      let documents = [];
-      snap.forEach((doc) => {
-        documents.push({ ...doc.data(), id: doc.id });
-      });
-      setProperties(documents);
-    });
-  };
-
-  useEffect(() => {
-    getProperties();
-  }, []);
-
-  return (
-    <>
-      <Filter />
-      <div className="list results">
-        {properties.map((property) => (
-          <Result key={property["id"]} property={property} />
-        ))}
-      </div>
-    </>
-  );
+  return <DoSearch location={query.get("location")} />;
 }

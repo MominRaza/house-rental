@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { matchPath, useLocation } from "react-router";
-import "firebase/firestore";
 
 import { firestore } from "../firebase_config";
 

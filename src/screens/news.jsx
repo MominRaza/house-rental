@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import "firebase/firestore";
 
 import NewsItem from "../components/news-item";
 

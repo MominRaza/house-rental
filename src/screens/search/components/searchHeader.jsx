@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 import UserLogo from "../../../components/UserLogo";
 import MenuToggle from "../../../components/MenuToggle";
+import SearchToggle from "./SearchToggle";
 
 import logo from "../../../images/logo.png";
 
@@ -15,7 +16,7 @@ class SearchHeader extends Component {
           <Link to="/" className="leading">
             <img src={logo} alt="House Rental" className="logo" />
           </Link>
-          <div className="search-box flex">
+          <div className="search-box flex" id="searchBox">
             <select name="location">
               <option value="Lucknow">Lucknow</option>
               <option value="Mumbai">Mumbai</option>
@@ -48,7 +49,10 @@ class SearchHeader extends Component {
             </Link>
             <UserLogo />
           </div>
-          <MenuToggle />
+          <div className="flex">
+            <SearchToggle />
+            <MenuToggle />
+          </div>
         </nav>
       </header>
     );

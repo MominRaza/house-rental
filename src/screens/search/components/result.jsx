@@ -18,7 +18,7 @@ class Result extends Component {
             }
           />
         </div>
-        <div>
+        <div className="ts-wraper">
           <div className="list-item price">
             <div className="ts-wraper">
               <p className="price h6">{property["price"]}</p>
@@ -56,7 +56,7 @@ class Result extends Component {
               <img
                 src={property["userImageUrl"]}
                 alt={property["userName"]}
-                className="avatar sm"
+                className="avatar md"
               />
             </div>
             <div className="ts-wraper">
