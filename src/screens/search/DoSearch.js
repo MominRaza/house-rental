@@ -26,12 +26,14 @@ export default function DoSearch(props) {
     <>
       <Filter />
       <div className="list results">
-        {properties.map((property) => {
-          if (props.location === property.city) {
-            return <Result key={property["id"]} property={property} />;
-          }
-          return;
-        })}
+        {
+          // eslint-disable-next-line
+          properties.map((property) => {
+            if (props.location === property.city) {
+              return <Result key={property["id"]} property={property} />;
+            }
+          })
+        }
       </div>
     </>
   );
