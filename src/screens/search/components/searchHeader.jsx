@@ -16,7 +16,7 @@ class SearchHeader extends Component {
           <Link to="/" className="leading">
             <img src={logo} alt="House Rental" className="logo" />
           </Link>
-          <div className="search-box flex" id="searchBox">
+          <form className="search-box flex" id="searchBox">
             <select name="location">
               <option value="Lucknow">Lucknow</option>
               <option value="Mumbai">Mumbai</option>
@@ -35,7 +35,7 @@ class SearchHeader extends Component {
             <button type="submit" className="btn secondary icon-o">
               <i className="material-icons">search</i>
             </button>
-          </div>
+          </form>
           <div className="trailing" id="menu">
             <Link to="/list-property" className="btn secondary sm">
               List Property
