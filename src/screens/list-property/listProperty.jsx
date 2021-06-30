@@ -1,5 +1,11 @@
 import React, { useState } from "react";
-import { Switch, Route, useRouteMatch, NavLink } from "react-router-dom";
+import {
+  Switch,
+  Route,
+  useRouteMatch,
+  NavLink,
+  useLocation,
+} from "react-router-dom";
 import Basic from "./components/basic";
 import Price from "./components/price";
 import Address from "./components/address";
@@ -10,6 +16,7 @@ import { firestore } from "../../firebase_config";
 function ListProperty() {
   const [propertyData, setPropertyData] = useState([]);
   const [error, setError] = useState("");
+  const location = useLocation();
 
   let match = useRouteMatch();
 
@@ -32,7 +39,7 @@ function ListProperty() {
         .doc()
         .set(propertyData)
         .then(() => {
-          setPropertyData([]);
+          location.push("/search");
         })
         .catch((err) => {
           console.error(err);
