@@ -29,6 +29,9 @@ export default function DoSearch(props) {
         {
           // eslint-disable-next-line
           properties.map((property) => {
+            if (!props.location) {
+              return <Result key={property["id"]} property={property} />;
+            }
             if (props.location === property.city) {
               return <Result key={property["id"]} property={property} />;
             }

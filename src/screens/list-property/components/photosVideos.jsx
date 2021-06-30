@@ -137,6 +137,7 @@ export default function PhotosVideos(props) {
                 imageUrls,
                 videoUrl,
               });
+              setError("");
             } else {
               setError("Upload at least one image!");
             }

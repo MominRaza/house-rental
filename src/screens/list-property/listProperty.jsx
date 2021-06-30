@@ -4,7 +4,7 @@ import {
   Route,
   useRouteMatch,
   NavLink,
-  useLocation,
+  useHistory,
 } from "react-router-dom";
 import Basic from "./components/basic";
 import Price from "./components/price";
@@ -16,7 +16,7 @@ import { firestore } from "../../firebase_config";
 function ListProperty() {
   const [propertyData, setPropertyData] = useState([]);
   const [error, setError] = useState("");
-  const location = useLocation();
+  const history = useHistory();
 
   let match = useRouteMatch();
 
@@ -32,6 +32,7 @@ function ListProperty() {
       propertyData.want &&
       propertyData.price &&
       propertyData.city &&
+      propertyData.imageUrls &&
       propertyData.imageUrls.length
     ) {
       const propertiesRef = firestore.collection("properties");
@@ -39,11 +40,12 @@ function ListProperty() {
         .doc()
         .set(propertyData)
         .then(() => {
-          location.push("/search");
+          history.push("/search");
         })
         .catch((err) => {
           console.error(err);
         });
+      setError("");
     } else {
       setError("Fill all the fields and save!");
     }
