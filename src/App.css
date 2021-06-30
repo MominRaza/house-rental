@@ -597,3 +597,8 @@ header:not(.home-page) {
   top: 4px;
   right: 4px;
 }
+
+.btn-o.profile {
+  padding: 5px;
+  border-width: 2px;
+}

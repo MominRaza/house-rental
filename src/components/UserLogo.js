@@ -12,7 +12,7 @@ export default function UserLogo() {
     setLoginModal(!loginModal);
   }
   return currentUser ? (
-    <Link to="/user" className="btn btn-o white rd-circle">
+    <Link to="/user" className="btn btn-o white rd-circle profile">
       <i className="material-icons">person</i>
     </Link>
   ) : (
