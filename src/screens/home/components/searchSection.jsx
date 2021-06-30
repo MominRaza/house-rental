@@ -1,15 +1,29 @@
-import React, { useState } from "react";
-import { NavLink, useHistory } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { NavLink, useHistory, useLocation } from "react-router-dom";
 
 export default function SearchSection() {
+  const [want, setWant] = useState("Sell");
   const [location, setLocation] = useState("Lucknow");
   const [search, setSearch] = useState("");
   const history = useHistory();
+  const { hash } = useLocation();
+
+  useEffect(() => {
+    if (hash === "#buy") {
+      setWant("Sell");
+    } else if (hash === "#rent") {
+      setWant("Rent");
+    } else if (hash === "#pg") {
+      setWant("PG / Co Living");
+    }
+  }, [hash]);
 
   function handleSearch(e) {
     e.preventDefault();
     if (search) {
-      history.push("/search?search=" + search + "&location=" + location);
+      history.push(
+        "/search?search=" + search + "&location=" + location + "&want=" + want
+      );
     }
   }
 
@@ -44,14 +58,14 @@ export default function SearchSection() {
             RENT
           </NavLink>
           <NavLink
-            to="#plots"
+            to="#pg"
             isActive={() => {
-              return window.location.hash === "#plots";
+              return window.location.hash === "#pg";
             }}
             className="tab-item white"
             activeClassName="selected"
           >
-            PLOTS
+            PG / Co Living
           </NavLink>
         </div>
         <form onSubmit={handleSearch}>
