@@ -4,12 +4,12 @@ import { storage } from "../../../firebase_config";
 import { Link } from "react-router-dom";
 
 export default function PhotosVideos(props) {
+  const property = props.propertyData;
+
   const [image, setImage] = useState(null);
-  const [imageUrls, setImageUrls] = useState(
-    props.propertyData.imageUrls || []
-  );
+  const [imageUrls, setImageUrls] = useState(property.imageUrls || []);
   const [video, setVideo] = useState(null);
-  const [videoUrl, setVideoUrl] = useState(props.propertyData.videoUrl || []);
+  const [videoUrl, setVideoUrl] = useState(property.videoUrl || []);
   const [error, setError] = useState("");
 
   const imageChangeHandler = (e) => {

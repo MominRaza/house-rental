@@ -2,14 +2,14 @@ import React, { useState } from "react";
 import { Link, useHistory } from "react-router-dom";
 
 function Address(props) {
-  const [city, setCity] = useState(props.propertyData.city || "");
-  const [building, setBuilding] = useState(props.propertyData.building || "");
-  const [locality, setLocality] = useState(props.propertyData.locality || "");
-  const [fflat, setFflat] = useState(props.propertyData.fflat || "");
-  const [floor, setFloor] = useState(props.propertyData.floor || "");
-  const [totalFloor, setTotalFloor] = useState(
-    props.propertyData.totalFloor || ""
-  );
+  const property = props.propertyData;
+
+  const [city, setCity] = useState(property.city || "");
+  const [building, setBuilding] = useState(property.building || "");
+  const [locality, setLocality] = useState(property.locality || "");
+  const [fflat, setFflat] = useState(property.fflat || "");
+  const [floor, setFloor] = useState(property.floor || "");
+  const [totalFloor, setTotalFloor] = useState(property.totalFloor || "");
 
   const history = useHistory();
 

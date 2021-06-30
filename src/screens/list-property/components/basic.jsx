@@ -2,24 +2,22 @@ import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 
 function Basic(props) {
-  const [want, setWant] = useState(props.propertyData.want || "");
+  const property = props.propertyData;
+
+  const [want, setWant] = useState(property.want || "");
   const [propertyPurpose, setPropertyPurpose] = useState(
-    props.propertyData.propertyPurpose || ""
+    property.propertyPurpose || ""
   );
-  const [propertyType, setPropertyType] = useState(
-    props.propertyData.propertyType || ""
-  );
+  const [propertyType, setPropertyType] = useState(property.propertyType || "");
   const [constructionStatus, setConstructionStatus] = useState(
-    props.propertyData.constructionStatus || ""
+    property.constructionStatus || ""
   );
-  const [bhk, setBhk] = useState(props.propertyData.bhk || "");
-  const [bathroom, setBathroom] = useState(props.propertyData.bathroom || "");
-  const [balcony, setBalcony] = useState(props.propertyData.balcony || "");
-  const [furnishType, setFurnishType] = useState(
-    props.propertyData.furnishType || ""
-  );
-  const [parking, setParking] = useState(props.propertyData.parking || "");
-  const [area, setArea] = useState(props.propertyData.area || "");
+  const [bhk, setBhk] = useState(property.bhk || "");
+  const [bathroom, setBathroom] = useState(property.bathroom || "");
+  const [balcony, setBalcony] = useState(property.balcony || "");
+  const [furnishType, setFurnishType] = useState(property.furnishType || "");
+  const [parking, setParking] = useState(property.parking || "");
+  const [area, setArea] = useState(property.area || "");
 
   const history = useHistory();
 
