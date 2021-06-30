@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
 import UserLogo from "../../../components/UserLogo";
+import MenuToggle from "../../../components/MenuToggle";
 
 import logo from "../../../images/logo.png";
 
@@ -14,7 +15,7 @@ class HomeHeader extends Component {
           <div className="leading">
             <img src={logo} alt="House Rental" className="logo" />
           </div>
-          <div className="trailing">
+          <div className="trailing" id="menu">
             <Link to="/list-property" className="btn secondary sm">
               List Property
             </Link>
@@ -27,6 +28,7 @@ class HomeHeader extends Component {
             </Link>
             <UserLogo />
           </div>
+          <MenuToggle />
         </nav>
       </header>
     );

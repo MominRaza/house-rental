@@ -3,20 +3,11 @@
   margin-top: 6px;
   height: 40px;
 }
-.home-page .logo {
-  height: 50px;
-  margin-left: 20px;
-  margin-top: 30px;
-}
 header:not(.home-page) {
   height: 56px;
 }
 .appbar {
   justify-content: space-between;
-}
-.home-page .appbar {
-  background: unset;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), transparent);
 }
 .flex {
   overflow-x: scroll;
@@ -601,4 +592,44 @@ header:not(.home-page) {
 .btn-o.profile {
   padding: 5px;
   border-width: 2px;
+}
+
+.menu-toggle {
+  display: none;
+}
+@media (min-width: 768px) {
+  .home-page .appbar {
+    background: unset;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), transparent);
+  }
+  .home-page .logo {
+    height: 50px;
+    margin-left: 20px;
+    margin-top: 30px;
+  }
+}
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+  #menu {
+    display: none;
+  }
+  #menu.active {
+    display: block;
+    background-color: var(--primary);
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 56px;
+    height: auto;
+    text-align: center;
+  }
+  #menu.active .btn {
+    display: block;
+    width: max-content;
+    margin: 5px auto;
+    padding: 10px 20px;
+    min-width: 200px;
+  }
 }

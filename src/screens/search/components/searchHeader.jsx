@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
 import UserLogo from "../../../components/UserLogo";
+import MenuToggle from "../../../components/MenuToggle";
 
 import logo from "../../../images/logo.png";
 
@@ -34,7 +35,7 @@ class SearchHeader extends Component {
               <i className="material-icons">search</i>
             </button>
           </div>
-          <div className="trailing">
+          <div className="trailing" id="menu">
             <Link to="/list-property" className="btn secondary sm">
               List Property
             </Link>
@@ -47,6 +48,7 @@ class SearchHeader extends Component {
             </Link>
             <UserLogo />
           </div>
+          <MenuToggle />
         </nav>
       </header>
     );

@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
+import MenuToggle from "../../../components/MenuToggle";
+
 import logo from "../../../images/logo.png";
 
 class LoginHeader extends Component {
@@ -12,7 +14,7 @@ class LoginHeader extends Component {
           <Link to="/" className="leading">
             <img src={logo} alt="House Rental" className="logo" />
           </Link>
-          <div className="trailing">
+          <div className="trailing" id="menu">
             <Link to="/list-property" className="btn secondary sm">
               List Property
             </Link>
@@ -24,6 +26,7 @@ class LoginHeader extends Component {
               News
             </Link>
           </div>
+          <MenuToggle />
         </nav>
       </header>
     );
