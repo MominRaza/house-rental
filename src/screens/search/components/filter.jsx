@@ -9,32 +9,32 @@ class Filter extends Component {
         <form className="filter flex">
           <select name="want">
             <option value="">I want to:</option>
-            <option value="sell">Sell</option>
-            <option value="rent">Rent</option>
-            <option value="pg">PG / Co Living</option>
+            <option>Sell</option>
+            <option>Rent</option>
+            <option>PG / Co Living</option>
           </select>
           <select name="type">
             <option value="">Property type:</option>
-            <option value="apartment">Apartment</option>
-            <option value="independent">Independent House / Floor</option>
-            <option value="plot">Plot</option>
-            <option value="agricultural">Agricultural Land</option>
-            <option value="farm">Farm House</option>
-            <option value="hotel">Hotel</option>
-            <option value="party">Party Place</option>
+            <option>Apartment</option>
+            <option>Independent House / Floor</option>
+            <option>Plot</option>
+            <option>Agricultural Land</option>
+            <option>Farm House</option>
+            <option>Hotel</option>
+            <option>Party Place</option>
           </select>
           <select name="status">
             <option value="">Construction Status:</option>
-            <option value="ready">Ready to move</option>
-            <option value="under">Under construction</option>
+            <option>Ready to move</option>
+            <option>Under construction</option>
           </select>
           <select name="bhk">
             <option value="">BHK Type:</option>
-            <option value="0">Single Room</option>
-            <option value="1">1 BHK</option>
-            <option value="2">2 BHK</option>
-            <option value="3">3 BHK</option>
-            <option value="3+">3+ BHK</option>
+            <option>Single Room</option>
+            <option>1 BHK</option>
+            <option>2 BHK</option>
+            <option>3 BHK</option>
+            <option>3+ BHK</option>
           </select>
           <button type="reset" className="btn secondary">
             Reset

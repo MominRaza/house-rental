@@ -9,5 +9,13 @@ function useQuery() {
 export default function Search() {
   let query = useQuery();
 
-  return <DoSearch location={query.get("location")} />;
+  return (
+    <DoSearch
+      location={query.get("location")}
+      want={query.get("want")}
+      type={query.get("type")}
+      status={query.get("status")}
+      bhk={query.get("bhk")}
+    />
+  );
 }

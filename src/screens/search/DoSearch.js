@@ -29,10 +29,13 @@ export default function DoSearch(props) {
         {
           // eslint-disable-next-line
           properties.map((property) => {
-            if (!props.location) {
-              return <Result key={property["id"]} property={property} />;
-            }
-            if (props.location === property.city) {
+            if (
+              (!props.location || props.location === property.city) &&
+              (!props.want || props.want === property.want) &&
+              (!props.type || props.type === property.propertyType) &&
+              (!props.status || props.status === property.constructionStatus) &&
+              (!props.bhk || props.bhk === property.bhk)
+            ) {
               return <Result key={property["id"]} property={property} />;
             }
           })
