@@ -70,8 +70,8 @@ export default function PhotosVideos(props) {
     <div className="card left">
       <p>Photos</p>
       {error && (
-        <div className="card b-danger">
-          <div className="material-icons">error_outline</div>
+        <div className="card b-danger center">
+          <i className="material-icons">error_outline</i>
           {error}
         </div>
       )}

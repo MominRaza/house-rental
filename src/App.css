@@ -584,6 +584,13 @@ section {
   border-width: 2px;
 }
 
+.card.b-danger {
+  padding: 16px;
+}
+.card.b-danger i {
+  margin-right: 10px;
+}
+
 /* responsive */
 .menu-toggle {
   display: none;

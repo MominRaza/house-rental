@@ -36,8 +36,8 @@ export default function Register() {
       <h1 className="h3">Register</h1>
       <form className="card left rd-4" onSubmit={handleSubmit}>
         {error && (
-          <div className="card b-danger">
-            <div className="material-icons">error_outline</div>
+          <div className="card b-danger center">
+            <i className="material-icons">error_outline</i>
             {error}
           </div>
         )}
