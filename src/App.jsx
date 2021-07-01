@@ -28,7 +28,7 @@ import TenantVerification from "./screens/tenantVerification/tenantVerification"
 import OwnerVerification from "./screens/ownerVerification";
 import EcoManagement from "./screens/ecoManagement";
 import { AuthProvider } from "./hooks/AuthContext";
-import User from "./screens/User";
+import User from "./screens/user/User";
 
 class App extends Component {
   render() {

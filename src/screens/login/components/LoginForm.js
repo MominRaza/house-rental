@@ -20,7 +20,8 @@ export default function LoginForm() {
     } else {
       setInfo("");
     }
-  }, [hash]);
+    // eslint-disable-next-line
+  }, []);
 
   async function handleSubmit(e) {
     e.preventDefault();
