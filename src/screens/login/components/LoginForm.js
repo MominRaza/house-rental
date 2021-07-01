@@ -1,14 +1,26 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { useAuth } from "../../../hooks/AuthContext";
-import { useHistory } from "react-router-dom";
+import { useHistory, useLocation } from "react-router-dom";
 
 export default function LoginForm() {
   const emailRef = useRef();
   const passwordRef = useRef();
   const { login } = useAuth();
   const [error, setError] = useState("");
+  const [info, setInfo] = useState("");
   const [loading, setLoading] = useState(false);
   const history = useHistory();
+  const { hash } = useLocation();
+
+  useEffect(() => {
+    if (hash === "#/favourites") {
+      setInfo("First login to add items to your favourites list.");
+    } else if (hash === "#/list-property") {
+      setInfo("First login to list your property.");
+    } else {
+      setInfo("");
+    }
+  }, [hash]);
 
   async function handleSubmit(e) {
     e.preventDefault();
@@ -27,6 +39,12 @@ export default function LoginForm() {
 
   return (
     <form className="card left rd-4" onSubmit={handleSubmit}>
+      {info && (
+        <div className="card b-info center">
+          <i className="material-icons">info_outline</i>
+          {info}
+        </div>
+      )}
       {error && (
         <div className="card b-danger center">
           <i className="material-icons">error_outline</i>

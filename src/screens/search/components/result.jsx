@@ -9,6 +9,7 @@ class Result extends Component {
         <div className="property-img">
           <img
             src={property.imageUrls[0].url}
+            className="rd-3"
             alt={
               property["propertyType"] +
               " for " +

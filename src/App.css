@@ -584,10 +584,12 @@ section {
   border-width: 2px;
 }
 
-.card.b-danger {
+.card.b-danger,
+.card.b-info {
   padding: 16px;
 }
-.card.b-danger i {
+.card.b-danger i,
+.card.b-info i {
   margin-right: 10px;
 }
 
