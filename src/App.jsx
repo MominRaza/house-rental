@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import PrivateRoute from "./components/PrivateRoute";
-import PublicRoute from "./components/PublicRoute";
 
 import Header from "./components/header";
 import HomeHeader from "./screens/home/components/homeHeader";
@@ -47,8 +46,8 @@ class App extends Component {
           <Switch>
             <Route exact path="/" component={Home} />
             <Route path="/search" component={Search} />
-            <PublicRoute path="/login" component={LoginScreen} />
-            <PublicRoute path="/register" component={Register} />
+            <Route path="/login" component={LoginScreen} />
+            <Route path="/register" component={Register} />
             <PrivateRoute path="/user" component={User} />
             <Route path="/about-us" component={About} />
             <Route path="/contact-us" component={Contact} />

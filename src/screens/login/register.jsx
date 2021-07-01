@@ -1,13 +1,16 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useAuth } from "../../hooks/AuthContext";
 
 import { Link, useHistory } from "react-router-dom";
+import { firestore } from "../../firebase_config";
 
 export default function Register() {
+  const nameRef = useRef();
+  const numberRef = useRef();
   const emailRef = useRef();
   const passwordRef = useRef();
   const passwordConfirmRef = useRef();
-  const { signup } = useAuth();
+  const { signup, currentUser } = useAuth();
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
   const history = useHistory();
@@ -22,14 +25,28 @@ export default function Register() {
     try {
       setError("");
       setLoading(true);
-      await signup(emailRef.current.value, passwordRef.current.value);
-      history.push("/user");
+      await signup(
+        emailRef.current.value,
+        passwordRef.current.value,
+        nameRef.current.value
+      );
     } catch {
       setError("Failed to create an account");
     }
 
     setLoading(false);
   }
+
+  useEffect(() => {
+    if (currentUser && currentUser.uid) {
+      firestore
+        .collection("users")
+        .doc(currentUser.uid)
+        .set({ number: numberRef.current.value })
+        .then(() => history.push("/user"));
+    }
+    // eslint-disable-next-line
+  }, [currentUser]);
 
   return (
     <section className="register center">
@@ -47,6 +64,7 @@ export default function Register() {
             type="text"
             name="fullName"
             placeholder="Enter full name"
+            ref={nameRef}
             required
           />
         </label>
@@ -56,6 +74,7 @@ export default function Register() {
             type="text"
             name="mobileNumber"
             placeholder="Enter mobile number"
+            ref={numberRef}
             required
           />
         </label>
