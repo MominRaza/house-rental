@@ -16,6 +16,7 @@ export default function Search() {
       type={query.get("type")}
       status={query.get("status")}
       bhk={query.get("bhk")}
+      price={query.get("price")}
     />
   );
 }

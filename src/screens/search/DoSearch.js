@@ -8,6 +8,7 @@ import { firestore } from "../../firebase_config";
 export default function DoSearch(props) {
   const [properties, setProperties] = useState([]);
   const [bhk, setBhk] = useState();
+  const [price, setPrice] = useState();
 
   const getProperties = () => {
     firestore.collection("properties").onSnapshot((snap) => {
@@ -28,6 +29,13 @@ export default function DoSearch(props) {
     }
   }, [props.bhk]);
 
+  useEffect(() => {
+    getProperties();
+    if (props.price === "affordable") {
+      setPrice(10000);
+    }
+  }, [props.price]);
+
   return (
     <>
       <Filter />
@@ -40,7 +48,8 @@ export default function DoSearch(props) {
               (!props.want || props.want === property.want) &&
               (!props.type || props.type === property.propertyType) &&
               (!props.status || props.status === property.constructionStatus) &&
-              (!bhk || bhk === property.bhk)
+              (!bhk || bhk === property.bhk) &&
+              (!price || price >= property.price)
             ) {
               return <Result key={property["id"]} property={property} />;
             }

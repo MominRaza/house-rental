@@ -16,28 +16,28 @@ class FeaturedSection extends Component {
           <h2 className="h4">Featured Collections</h2>
           <p>Handpicked projects for you</p>
           <div className="flex">
-            <Link to="/search?type=hour" className="flex-item card">
+            <Link to="/search?type=Party Place" className="flex-item card">
               <div>
                 <img src={hour} alt="Hour Ready" />
                 <h3>Hour Ready</h3>
                 <p>Enjoy perks of metered time.</p>
               </div>
             </Link>
-            <Link to="/search?condition=move-in" className="flex-item card">
+            <Link to="/search?status=Ready to move" className="flex-item card">
               <div>
                 <img src={ready} alt="Ready to Move-In" />
                 <h3>Ready to Move-In</h3>
                 <p>Homes ready to use</p>
               </div>
             </Link>
-            <Link to="/search?type=township" className="flex-item card">
+            <Link to="/search?type=Hotel" className="flex-item card">
               <div>
                 <img src={townships} alt="Hotels" />
                 <h3>Hotels</h3>
                 <p>Relaxation like never before</p>
               </div>
             </Link>
-            <Link to="/search?price=luxury" className="flex-item card">
+            <Link to="/search?type=Farm House" className="flex-item card">
               <div>
                 <img src={luxury} alt="Farmhouse" />
                 <h3>Farmhouse</h3>

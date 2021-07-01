@@ -32,14 +32,14 @@ export default function Filter() {
       <form className="filter flex" onSubmit={handleFilter}>
         <select name="want" onChange={(e) => setWant(e.target.value)}>
           <option value="">I want to:</option>
-          <option>Sell</option>
+          <option value="Sell">Buy</option>
           <option>Rent</option>
           <option>PG / Co Living</option>
         </select>
         <select name="type" onChange={(e) => setType(e.target.value)}>
           <option value="">Property type:</option>
-          <option>Apartment</option>
-          <option>Independent House / Floor</option>
+          <option>Apartment/House</option>
+          <option>Independent (House / Floor)</option>
           <option>Plot</option>
           <option>Agricultural Land</option>
           <option>Farm House</option>
