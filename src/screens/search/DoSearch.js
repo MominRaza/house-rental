@@ -7,6 +7,7 @@ import { firestore } from "../../firebase_config";
 
 export default function DoSearch(props) {
   const [properties, setProperties] = useState([]);
+  const [bhk, setBhk] = useState();
 
   const getProperties = () => {
     firestore.collection("properties").onSnapshot((snap) => {
@@ -20,7 +21,12 @@ export default function DoSearch(props) {
 
   useEffect(() => {
     getProperties();
-  }, []);
+    if (props.bhk === "3  BHK") {
+      setBhk("3+ BHK");
+    } else {
+      setBhk(props.bhk);
+    }
+  }, [props.bhk]);
 
   return (
     <>
@@ -34,7 +40,7 @@ export default function DoSearch(props) {
               (!props.want || props.want === property.want) &&
               (!props.type || props.type === property.propertyType) &&
               (!props.status || props.status === property.constructionStatus) &&
-              (!props.bhk || props.bhk === property.bhk)
+              (!bhk || bhk === property.bhk)
             ) {
               return <Result key={property["id"]} property={property} />;
             }

@@ -47,6 +47,9 @@ class Result extends Component {
               "/" +
               property["totalFloor"]}
           </p>
+          <p className="type">
+            {property["bhk"]} - {property["constructionStatus"]}
+          </p>
           <p className="details">
             {property["details"]}
             <a href={"/property/" + property["id"]}>Read more</a>
@@ -63,7 +66,12 @@ class Result extends Component {
               <p className="title">{property["userName"]}</p>
             </div>
             <div className="trailing">
-              <button className="btn sm">Contact</button>
+              <a
+                href={"tel:" + property["userContact"]}
+                className="btn primary"
+              >
+                Contact
+              </a>
             </div>
           </div>
         </div>

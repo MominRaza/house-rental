@@ -21,10 +21,8 @@ function ListProperty() {
   let match = useRouteMatch();
 
   const getPropertyData = (data) => {
-    console.log(data);
     let property = { ...propertyData, ...data };
     setPropertyData(property);
-    console.log(property);
   };
 
   function listProperty() {
