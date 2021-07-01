@@ -69,7 +69,12 @@ export default function PhotosVideos(props) {
   return (
     <div className="card left">
       <p>Photos</p>
-      {error && <span>{error}</span>}
+      {error && (
+        <div className="card b-danger">
+          <div className="material-icons">error_outline</div>
+          {error}
+        </div>
+      )}
       <div className="flex">
         {imageUrls.map((url) => (
           <div className="uploaded-file">

@@ -84,7 +84,12 @@ function ListProperty() {
           Photos/Videos
         </NavLink>
       </div>
-      {error && <span>{error}</span>}
+      {error && (
+        <div className="card b-danger">
+          <div className="material-icons">error_outline</div>
+          {error}
+        </div>
+      )}
       <Switch>
         <Route exact path={match.path}>
           <Basic
