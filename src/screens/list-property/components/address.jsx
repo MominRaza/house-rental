@@ -3,13 +3,14 @@ import { Link, useHistory } from "react-router-dom";
 
 function Address(props) {
   const property = props.propertyData;
+  const [error, setError] = useState("");
 
   const [city, setCity] = useState(property.city || "");
   const [building, setBuilding] = useState(property.building || "");
   const [locality, setLocality] = useState(property.locality || "");
   const [fflat, setFflat] = useState(property.fflat || "");
-  const [floor, setFloor] = useState(property.floor || "");
-  const [totalFloor, setTotalFloor] = useState(property.totalFloor || "");
+  const [floor, setFloor] = useState(property.floor || 0);
+  const [totalFloor, setTotalFloor] = useState(property.totalFloor || 0);
 
   const history = useHistory();
 
@@ -18,15 +19,20 @@ function Address(props) {
       className="card left"
       onSubmit={(event) => {
         event.preventDefault();
-        props.addPropertyData({
-          city,
-          building,
-          locality,
-          fflat,
-          floor,
-          totalFloor,
-        });
-        history.push("/list-property/photos-videos");
+        console.log(floor + " " + totalFloor);
+        if (floor <= totalFloor) {
+          props.addPropertyData({
+            city,
+            building,
+            locality,
+            fflat,
+            floor: floor.toString(),
+            totalFloor: totalFloor.toString(),
+          });
+          history.push("/list-property/photos-videos");
+        } else {
+          setError("floar should be less than or equal to total Floor!");
+        }
       }}
     >
       <p>Address:</p>
@@ -75,6 +81,12 @@ function Address(props) {
           />
         </label>
       </div>
+      {error && (
+        <div className="card b-danger center">
+          <i className="material-icons">error_outline</i>
+          {error}
+        </div>
+      )}
       <div className="flex">
         <label className="flex-item">
           Flat No.
