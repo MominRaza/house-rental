@@ -17,6 +17,8 @@ export default function LoginForm() {
       setInfo("First login to add items to your favourites list.");
     } else if (hash === "#/list-property") {
       setInfo("First login to list your property.");
+    } else if (hash === "#/tenant-verification") {
+      setInfo("First login to verify a tenant.");
     } else {
       setInfo("");
     }
