@@ -22,10 +22,7 @@ class Login extends Component {
         <LoginForm />
         <p className="or">or</p>
         <p>
-          Not have an account{" "}
-          <Link to="/register" onClick={this.props.onLoginToggle}>
-            Register
-          </Link>
+          Need an account? <Link to="/register">Sign Up</Link>
         </p>
       </div>
     );

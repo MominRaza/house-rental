@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   Switch,
   Route,
@@ -12,11 +12,24 @@ import Address from "./components/address";
 import PhotosVideos from "./components/photosVideos";
 
 import { firestore } from "../../firebase_config";
+import { useAuth } from "../../hooks/AuthContext";
 
 function ListProperty() {
   const [propertyData, setPropertyData] = useState([]);
   const [error, setError] = useState("");
   const history = useHistory();
+  const { currentUser, user } = useAuth();
+
+  useEffect(() => {
+    let data = {
+      uid: currentUser.uid,
+      userName: currentUser.displayName,
+      userImageUrl: currentUser.photoURL,
+      userContact: user.number,
+    };
+    getPropertyData(data);
+    // eslint-disable-next-line
+  }, []);
 
   let match = useRouteMatch();
 
@@ -38,7 +51,7 @@ function ListProperty() {
         .doc()
         .set(propertyData)
         .then(() => {
-          history.push("/search");
+          history.push("/user");
         })
         .catch((err) => {
           console.error(err);

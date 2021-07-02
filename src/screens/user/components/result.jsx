@@ -1,8 +1,19 @@
 import React, { Component } from "react";
+import { firestore } from "../../../firebase_config";
 
 class Result extends Component {
   state = {};
+
   render() {
+    function handleDelete(id) {
+      firestore
+        .collection("properties")
+        .doc(id)
+        .delete()
+        .then(() => console.log("Deleted"))
+        .catch((err) => console.log(err));
+    }
+
     const property = this.props.property;
     return (
       <div className="list-item">
@@ -67,12 +78,12 @@ class Result extends Component {
               <p className="title">{property["userName"]}</p>
             </div>
             <div className="trailing">
-              <a
-                href={"tel:" + property["userContact"]}
-                className="btn primary icon-l"
+              <button
+                className="btn danger icon-l"
+                onClick={() => handleDelete(property.id)}
               >
-                <div className="material-icons md-18">call</div> Contact
-              </a>
+                <div className="material-icons md-18">delete</div>Delete
+              </button>
             </div>
           </div>
         </div>

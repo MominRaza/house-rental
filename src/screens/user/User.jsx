@@ -1,10 +1,14 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
+
+import { firestore } from "../../firebase_config";
 import { useAuth } from "../../hooks/AuthContext";
 import Progress from "./components/progress";
+import Result from "./components/result";
 
 export default function User() {
   const [error, setError] = useState("");
+  const [properties, setProperties] = useState([]);
   const [image, setImage] = useState(null);
   const [imageUrls, setImageUrls] = useState("");
 
@@ -31,7 +35,19 @@ export default function User() {
     }
   };
 
-  console.log(currentUser);
+  const getProperties = () => {
+    firestore.collection("properties").onSnapshot((snap) => {
+      let documents = [];
+      snap.forEach((doc) => {
+        documents.push({ ...doc.data(), id: doc.id });
+      });
+      setProperties(documents);
+    });
+  };
+
+  useEffect(() => {
+    getProperties();
+  }, []);
 
   return (
     <section className="user">
@@ -81,6 +97,17 @@ export default function User() {
         <button className="btn danger" onClick={handleLogout}>
           Log Out
         </button>
+      </div>
+      <h2 className="h3">My Listed Properties</h2>
+      <div className="list results">
+        {
+          // eslint-disable-next-line
+          properties.map((property) => {
+            if (currentUser.uid === property.uid) {
+              return <Result key={property["id"]} property={property} />;
+            }
+          })
+        }
       </div>
     </section>
   );
