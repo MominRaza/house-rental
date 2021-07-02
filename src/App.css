@@ -467,7 +467,7 @@ section {
   max-width: 100%;
 }
 .results .price,
-.results .user {
+.results .user-details {
   margin-bottom: 0;
   padding-left: 0;
   padding-right: 0;
@@ -593,11 +593,36 @@ section {
   margin-right: 10px;
 }
 
-.favorite {
+.favorite,
+.user {
   max-width: 1000px;
   margin: 50px auto;
 }
 
+.user .flex {
+  flex-wrap: wrap;
+  overflow: hidden;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  justify-content: center;
+  align-items: flex-end;
+}
+.user .upload-file {
+  height: 30px;
+  width: auto;
+  padding: 4px;
+  margin-bottom: 0;
+}
+.user .details {
+  margin: 20px 0;
+}
+.user .logout {
+  margin-top: 20px;
+}
+.user h2 {
+  margin-top: 50px;
+  margin-bottom: -20px;
+}
 /* responsive */
 .menu-toggle {
   display: none;

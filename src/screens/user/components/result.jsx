@@ -63,7 +63,7 @@ class Result extends Component {
             {property["details"]}
             <a href={"/property/" + property["id"]}>Read more</a>
           </p>
-          <div className="list-item user">
+          <div className="list-item user-details">
             <div className="leading">
               <img
                 src={property["userImageUrl"]}

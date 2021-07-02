@@ -49,10 +49,12 @@ export default function User() {
     getProperties();
   }, []);
 
+  console.log(imageUrls);
+
   return (
     <section className="user">
       <h1 className="h3">Profile</h1>
-      <div className="card">
+      <div className="card center">
         {error && (
           <div className="card b-danger">
             <div className="material-icons">error_outline</div>
@@ -60,7 +62,7 @@ export default function User() {
           </div>
         )}
         <div className="flex">
-          {currentUser.photoURL && (
+          {(imageUrls || currentUser.photoURL) && (
             <div className="uploaded-file">
               <img
                 src={imageUrls || currentUser.photoURL}
@@ -75,7 +77,11 @@ export default function User() {
               accept="image/*"
               onChange={imageChangeHandler}
             />
-            {currentUser.photoURL ? "Change Image" : "Upload Image"}
+            {imageUrls || currentUser.photoURL ? (
+              <div className="material-icons md-18">edit</div>
+            ) : (
+              "Upload Image"
+            )}
           </label>
           {image && (
             <Progress
@@ -85,20 +91,21 @@ export default function User() {
             />
           )}
         </div>
-        <p>
+        <p className="details">
           <strong>Name:</strong> {currentUser.displayName}
         </p>
-        <p>
+        <p className="details">
           <strong>Email:</strong> {currentUser.email}
         </p>
-        <p>
+        <p className="details">
           <strong>Number:</strong> {user && user.number}
         </p>
-        <button className="btn danger" onClick={handleLogout}>
+        <button className="btn danger logout icon-l" onClick={handleLogout}>
+          <div className="material-icons md-18">logout</div>
           Log Out
         </button>
       </div>
-      <h2 className="h3">My Listed Properties</h2>
+      <h2 className="h4">My Listed Properties</h2>
       <div className="list results">
         {
           // eslint-disable-next-line
