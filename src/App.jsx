@@ -4,7 +4,6 @@ import PrivateRoute from "./components/PrivateRoute";
 
 import Header from "./components/header";
 import HomeHeader from "./screens/home/components/homeHeader";
-import SearchHeader from "./screens/search/components/searchHeader";
 import LoginHeader from "./screens/login/components/loginHeader";
 import Footer from "./components/footer";
 
@@ -20,7 +19,7 @@ import News from "./screens/news";
 import SingleNews from "./screens/singleNews";
 import Privacy from "./screens/privacy";
 import Terms from "./screens/terms";
-import Favourites from "./screens/Favourites";
+import Favourites from "./screens/favourites";
 import RentPayment from "./screens/rentPayment/rentPayment";
 import RentAgreement from "./screens/rentAgreement";
 import PackersMovers from "./screens/packersMovers";
@@ -37,7 +36,7 @@ class App extends Component {
         <AuthProvider>
           <Switch>
             <Route exact path="/" component={HomeHeader} />
-            <Route path="/search" component={SearchHeader} />
+            <Route path="/search" />
             <Route path="/login" component={LoginHeader} />
             <Route path="/register" component={LoginHeader} />
             <Route path="/user" component={LoginHeader} />

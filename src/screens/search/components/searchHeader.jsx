@@ -17,7 +17,10 @@ class SearchHeader extends Component {
           <Link to="/" className="leading">
             <img src={logo} alt="House Rental" className="logo" />
           </Link>
-          <SearchBox />
+          <SearchBox
+            location={this.props.location}
+            search={this.props.search}
+          />
           <div className="trailing" id="menu">
             <Link to="/list-property" className="btn secondary sm">
               List Property

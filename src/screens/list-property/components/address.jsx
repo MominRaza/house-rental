@@ -36,33 +36,18 @@ function Address(props) {
           <select
             name="city"
             onChange={(e) => setCity(e.target.value)}
+            value={city}
             required
           >
             <option value="">Select city</option>
-            <option value="Lucknow" selected={city === "Lucknow"}>
-              Lucknow
-            </option>
-            <option value="Mumbai" selected={city === "Lucknow"}>
-              Mumbai
-            </option>
-            <option value="Bengaluru" selected={city === "Lucknow"}>
-              Bengaluru
-            </option>
-            <option value="Hyderabad" selected={city === "Lucknow"}>
-              Hyderabad
-            </option>
-            <option value="Pune" selected={city === "Lucknow"}>
-              Pune
-            </option>
-            <option value="Chennai" selected={city === "Lucknow"}>
-              Chennai
-            </option>
-            <option value="Delhi" selected={city === "Lucknow"}>
-              Delhi
-            </option>
-            <option value="Gurgaon" selected={city === "Lucknow"}>
-              Gurgaon
-            </option>
+            <option value="Lucknow">Lucknow</option>
+            <option value="Mumbai">Mumbai</option>
+            <option value="Bengaluru">Bengaluru</option>
+            <option value="Hyderabad">Hyderabad</option>
+            <option value="Pune">Pune</option>
+            <option value="Chennai">Chennai</option>
+            <option value="Delhi">Delhi</option>
+            <option value="Gurgaon">Gurgaon</option>
           </select>
         </label>
       </div>

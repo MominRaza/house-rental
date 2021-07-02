@@ -12,6 +12,7 @@ export default function Search() {
   return (
     <DoSearch
       location={query.get("location")}
+      search={query.get("search")}
       want={query.get("want")}
       type={query.get("type")}
       status={query.get("status")}

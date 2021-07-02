@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 
-export default function SearchBox() {
-  const [location, setLocation] = useState("Lucknow");
-  const [search, setSearch] = useState("");
+export default function SearchBox(props) {
+  const [location, setLocation] = useState(props.location || "Lucknow");
+  const [search, setSearch] = useState(props.search || "");
   const history = useHistory();
 
   function handleSearch(e) {
@@ -15,7 +15,11 @@ export default function SearchBox() {
 
   return (
     <form className="search-box flex" id="searchBox" onSubmit={handleSearch}>
-      <select name="location" onChange={(e) => setLocation(e.target.value)}>
+      <select
+        name="location"
+        onChange={(e) => setLocation(e.target.value)}
+        value={location}
+      >
         <option value="Lucknow">Lucknow</option>
         <option value="Mumbai">Mumbai</option>
         <option value="Bengaluru">Bengaluru</option>
@@ -30,6 +34,7 @@ export default function SearchBox() {
         name="search"
         placeholder="Search for locality, landmark, project, or builder"
         onChange={(e) => setSearch(e.target.value)}
+        value={search}
         required
       />
       <button type="submit" className="btn secondary icon-o">

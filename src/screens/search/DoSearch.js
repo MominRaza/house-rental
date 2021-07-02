@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 
 import Result from "./components/result";
 import Filter from "./components/filter";
+import SearchHeader from "./components/searchHeader";
 
 import { firestore } from "../../firebase_config";
 
@@ -38,7 +39,8 @@ export default function DoSearch(props) {
 
   return (
     <>
-      <Filter />
+      <SearchHeader location={props.location} search={props.search} />
+      <Filter filter={props} />
       <div className="list results">
         {
           // eslint-disable-next-line
