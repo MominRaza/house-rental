@@ -679,6 +679,13 @@ section {
     padding: 10px 20px;
     min-width: 200px;
   }
+  #menu.active .btn.btn-o.profile {
+    border: none;
+  }
+  #menu.active .btn.btn-o.profile::after {
+    content: "Profile";
+    margin-left: 4px;
+  }
   #menu.active .btn.modal-close {
     min-width: auto;
   }
