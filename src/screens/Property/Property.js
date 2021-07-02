@@ -15,6 +15,13 @@ export default function Property() {
 
   const { addToFavourites, removeFromFavourites, user } = useAuth();
 
+  useEffect(() => {
+    if (user && user.favourites) {
+      setIsFavorite(user.favourites.includes(match.params["id"]));
+    }
+    // eslint-disable-next-line
+  }, []);
+
   function handleFavotite() {
     setIsLoading(true);
     if (!user) {
