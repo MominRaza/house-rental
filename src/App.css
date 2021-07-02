@@ -623,6 +623,36 @@ section {
   margin-top: 50px;
   margin-bottom: -20px;
 }
+.property {
+  max-width: 1200px;
+  margin: 50px auto;
+}
+.property-image {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+.property-image .main-image {
+  width: calc(100% - 200px);
+  text-align: center;
+  margin-right: 10px;
+}
+.property-image .main-image img {
+  max-width: 100%;
+  max-height: 70vh;
+}
+.property-image .all-images {
+  width: 220px;
+  max-height: 70vh;
+  overflow: hidden;
+  overflow-y: auto;
+  text-align: center;
+}
+.property-image .all-images img {
+  width: 200px;
+  height: 150px;
+}
+
 /* responsive */
 .menu-toggle {
   display: none;

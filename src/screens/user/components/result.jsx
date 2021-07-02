@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { firestore } from "../../../firebase_config";
+import { Link } from "react-router-dom";
 
 class Result extends Component {
   state = {};
@@ -61,7 +62,7 @@ class Result extends Component {
           </p>
           <p className="details">
             {property["details"]}
-            <a href={"/property/" + property["id"]}>Read more</a>
+            <Link to={"/property/" + property["id"]}>Read more</Link>
           </p>
           <div className="list-item user-details">
             <div className="leading">

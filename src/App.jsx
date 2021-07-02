@@ -28,6 +28,7 @@ import OwnerVerification from "./screens/ownerVerification";
 import EcoManagement from "./screens/ecoManagement";
 import { AuthProvider } from "./hooks/AuthContext";
 import User from "./screens/user/User";
+import Property from "./screens/Property/Property";
 
 class App extends Component {
   render() {
@@ -45,6 +46,7 @@ class App extends Component {
           <Switch>
             <Route exact path="/" component={Home} />
             <Route path="/search" component={Search} />
+            <Route path="/property" component={Property} />
             <Route path="/login" component={LoginScreen} />
             <Route path="/register" component={Register} />
             <PrivateRoute path="/user" component={User} />

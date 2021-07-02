@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useHistory } from "react-router-dom";
+import { useHistory, Link } from "react-router-dom";
 import { useAuth } from "../../../hooks/AuthContext";
 
 export default function Result({ property }) {
@@ -55,7 +55,7 @@ export default function Result({ property }) {
           </div>
           <div className="trailing">
             <button
-              className="btn btn-t primary"
+              className="btn btn-t danger"
               onClick={handleFavotite}
               disabled={isLoading}
             >
@@ -90,7 +90,7 @@ export default function Result({ property }) {
         </p>
         <p className="details">
           {property["details"]}
-          <a href={"/property/" + property["id"]}>Read more</a>
+          <Link to={"/property/" + property["id"]}>Read more</Link>
         </p>
         <div className="list-item user-details">
           <div className="leading">
