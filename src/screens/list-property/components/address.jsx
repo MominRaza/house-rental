@@ -33,13 +33,37 @@ function Address(props) {
       <div className="flex">
         <label>
           City/Town
-          <input
-            type="text"
+          <select
             name="city"
             onChange={(e) => setCity(e.target.value)}
-            value={city}
             required
-          />
+          >
+            <option value="">Select city</option>
+            <option value="Lucknow" selected={city === "Lucknow"}>
+              Lucknow
+            </option>
+            <option value="Mumbai" selected={city === "Lucknow"}>
+              Mumbai
+            </option>
+            <option value="Bengaluru" selected={city === "Lucknow"}>
+              Bengaluru
+            </option>
+            <option value="Hyderabad" selected={city === "Lucknow"}>
+              Hyderabad
+            </option>
+            <option value="Pune" selected={city === "Lucknow"}>
+              Pune
+            </option>
+            <option value="Chennai" selected={city === "Lucknow"}>
+              Chennai
+            </option>
+            <option value="Delhi" selected={city === "Lucknow"}>
+              Delhi
+            </option>
+            <option value="Gurgaon" selected={city === "Lucknow"}>
+              Gurgaon
+            </option>
+          </select>
         </label>
       </div>
       <div className="flex">

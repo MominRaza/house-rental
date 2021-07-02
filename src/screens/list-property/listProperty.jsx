@@ -20,23 +20,26 @@ function ListProperty() {
   const history = useHistory();
   const { currentUser, user } = useAuth();
 
-  useEffect(() => {
-    let data = {
-      uid: currentUser.uid,
-      userName: currentUser.displayName,
-      userImageUrl: currentUser.photoURL,
-      userContact: user.number,
-    };
-    getPropertyData(data);
-    // eslint-disable-next-line
-  }, []);
-
-  let match = useRouteMatch();
-
   const getPropertyData = (data) => {
     let property = { ...propertyData, ...data };
     setPropertyData(property);
   };
+
+  useEffect(() => {
+    if (currentUser && user) {
+      let data = {
+        uid: currentUser.uid,
+        userName: currentUser.displayName,
+        userImageUrl: currentUser.photoURL,
+        userContact: user.number,
+      };
+      console.log(data);
+      getPropertyData(data);
+    }
+    // eslint-disable-next-line
+  }, [currentUser, user]);
+
+  let match = useRouteMatch();
 
   function listProperty() {
     if (

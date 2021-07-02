@@ -35,9 +35,6 @@ class Result extends Component {
             <div className="ts-wraper">
               <p className="price h6">{property["price"]}</p>
             </div>
-            <div className="trailing">
-              <i className="material-icons">favorite_outline</i>
-            </div>
           </div>
           <p className="type">
             <b>{property["propertyType"]}</b>

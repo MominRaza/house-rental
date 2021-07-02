@@ -1,3 +1,4 @@
+import firebase from "firebase/app";
 import React, { useContext, useEffect, useState } from "react";
 import { auth, firestore } from "../firebase_config";
 
@@ -21,6 +22,24 @@ export function AuthProvider({ children }) {
 
   function addPhotoURL(photoURL) {
     return auth.currentUser.updateProfile({ photoURL });
+  }
+
+  function addToFavourites(id) {
+    return firestore
+      .collection("users")
+      .doc(currentUser.uid)
+      .update({
+        favourites: firebase.firestore.FieldValue.arrayUnion(id),
+      });
+  }
+
+  function removeFromFavourites(id) {
+    return firestore
+      .collection("users")
+      .doc(currentUser.uid)
+      .update({
+        favourites: firebase.firestore.FieldValue.arrayRemove(id),
+      });
   }
 
   function login(email, password) {
@@ -58,6 +77,8 @@ export function AuthProvider({ children }) {
     login,
     logout,
     addPhotoURL,
+    addToFavourites,
+    removeFromFavourites,
   };
   return (
     <AuthContext.Provider value={value}>
