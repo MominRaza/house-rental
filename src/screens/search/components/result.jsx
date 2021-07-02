@@ -1,18 +1,25 @@
 import React, { useEffect, useState } from "react";
+import { useHistory } from "react-router-dom";
 import { useAuth } from "../../../hooks/AuthContext";
 
 export default function Result({ property }) {
   const [isFavorite, setIsFavorite] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const { addToFavourites, removeFromFavourites, user } = useAuth();
+  const history = useHistory();
 
   useEffect(() => {
-    setIsFavorite(user.favourites.includes(property.id));
+    if (user && user.favourites) {
+      setIsFavorite(user.favourites.includes(property.id));
+    }
     // eslint-disable-next-line
   }, []);
 
   function handleFavotite() {
     setIsLoading(true);
+    if (!user) {
+      return history.push("/favourites");
+    }
     if (isFavorite) {
       removeFromFavourites(property.id).then(() => {
         setIsFavorite(!isFavorite);
