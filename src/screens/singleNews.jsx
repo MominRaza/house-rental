@@ -26,7 +26,7 @@ export default function SingleNews() {
     <section className="single-news">
       <h1 className="h4">{news["title"]}</h1>
       <div className="card rd-4">
-        <img src={"../" + news["imageUrl"]} alt={news["title"]} />
+        <img src={news["imageUrl"]} alt={news["title"]} />
         <p
           className="b1"
           dangerouslySetInnerHTML={{ __html: news["news"] }}
