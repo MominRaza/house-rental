@@ -28,7 +28,7 @@ import OwnerVerification from "./screens/ownerVerification";
 import EcoManagement from "./screens/ecoManagement";
 import { AuthProvider } from "./hooks/AuthContext";
 import User from "./screens/user/User";
-import Property from "./screens/Property/Property";
+import Property from "./screens/Property";
 
 class App extends Component {
   render() {

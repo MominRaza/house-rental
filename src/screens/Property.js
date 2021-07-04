@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { matchPath, useLocation, useHistory } from "react-router-dom";
 
-import { useAuth } from "../../hooks/AuthContext";
+import { useAuth } from "../hooks/AuthContext";
 
-import { firestore } from "../../firebase_config";
+import { firestore } from "../firebase_config";
 
 export default function Property() {
   const [isFavorite, setIsFavorite] = useState(false);
@@ -148,7 +148,7 @@ export default function Property() {
         <>
           <h2 className="h3">Property Perks</h2>
           <div className="card property-detail rd-3">
-            <h3 className="h5">Rent Includes</h3>
+            <h3 className="h4">Rent Includes</h3>
             <div className="grid grid-laptop-4 grid-tablet-2 center">
               <div className="grid-item">
                 <i
@@ -195,7 +195,7 @@ export default function Property() {
                 Maintenance Bill
               </div>
             </div>
-            <h3 className="h5">Property Perks</h3>
+            <h3 className="h4">Property Perks</h3>
             <div className="grid grid-laptop-5 grid-tablet-3 center">
               <div className="grid-item">
                 <i
@@ -337,7 +337,7 @@ export default function Property() {
           <iframe
             title="Google Map"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d113525.16554900429!2d85.93170977987533!3d27.229777919537003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb8ca1c134290d%3A0x53a3e8776d17b360!2sHotel%20Sindhuli%20Inn!5e0!3m2!1sen!2sin!4v1625413110647!5m2!1sen!2sin"
-            width="500"
+            width="100%"
             height="320"
             allowfullscreen=""
             loading="lazy"
@@ -347,7 +347,8 @@ export default function Property() {
       <h2 className="h3">Book now</h2>
       <div className="card property-detail rd-3">
         <h3 className="h4">
-          {property.want} only for ₹ {property.price}
+          {property.want === "Sell" ? "Buy" : property.want} only for ₹{" "}
+          {property.price}
         </h3>
         {property.want === "Sell" ? (
           <>
