@@ -323,15 +323,17 @@ export default function Property() {
         </>
       )}
       <h2 className="h3">Address</h2>
-      <div className="card property-detail rd-3">
-        <p>{property.city}</p>
-        <p>{property.locality}</p>
-        <p>{property.fflat}</p>
-        <p>
-          {property.floor} / {property.totalFloor}
-        </p>
-        <p>{property.building}</p>
-        <div className="map">
+      <div className="card property-detail rd-3 grid grid-tablet-2">
+        <div className="grid-item">
+          <h3 className="h5">{property.city}</h3>
+          <p>{property.fflat}</p>
+          <p>
+            {property.floor} / {property.totalFloor}
+          </p>
+          <p>{property.building}</p>
+          <p>{property.locality}</p>
+        </div>
+        <div className="grid-item map">
           <iframe
             title="Google Map"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d113525.16554900429!2d85.93170977987533!3d27.229777919537003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb8ca1c134290d%3A0x53a3e8776d17b360!2sHotel%20Sindhuli%20Inn!5e0!3m2!1sen!2sin!4v1625413110647!5m2!1sen!2sin"
@@ -344,10 +346,24 @@ export default function Property() {
       </div>
       <h2 className="h3">Book now</h2>
       <div className="card property-detail rd-3">
-        <p>₹ {property.price}</p>
-        <p>{property.rentMode}</p>
-        <p>{property.priceRange}</p>
-        <p>{property.constructionStatus}</p>
+        <h3 className="h4">
+          {property.want} only for ₹ {property.price}
+        </h3>
+        {property.want === "Sell" ? (
+          <>
+            <h4 className="h6">Price Range</h4>
+            <p>{property.priceRange}</p>
+          </>
+        ) : (
+          <>
+            <h4 className="h6">Rent mode</h4>
+            <p>
+              {property.rentMode === "Both"
+                ? "Both Online and Offline"
+                : property.rentMode}
+            </p>
+          </>
+        )}
         <div className="list-item user-details">
           <div className="leading">
             <img

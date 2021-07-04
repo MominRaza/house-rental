@@ -675,6 +675,10 @@ section {
   margin-right: 16px;
 }
 
+.property .user-details {
+  margin-top: 40px;
+}
+
 /* responsive */
 .menu-toggle {
   display: none;
