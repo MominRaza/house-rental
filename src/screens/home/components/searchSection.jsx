@@ -29,7 +29,9 @@ export default function SearchSection() {
 
   return (
     <section className="home center">
-      <h1 className="h3">Buy properties in {location}</h1>
+      <h1 className="h3">
+        {want} properties in {location}
+      </h1>
       <h2 className="h5">Choose your quality life</h2>
       <div className="card bg-dark">
         <div className="tab">
