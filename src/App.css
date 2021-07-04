@@ -671,6 +671,9 @@ section {
 .property .grid-item {
   padding: 40px 20px;
 }
+.property .grid-item i {
+  margin-right: 16px;
+}
 
 /* responsive */
 .menu-toggle {

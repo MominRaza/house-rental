@@ -144,8 +144,184 @@ export default function Property() {
           <p>{property.area} Sq-ft</p>
         </div>
       </div>
-      <h2 className="h3">Property Perks</h2>
-      <div className="card property-detail rd-3"></div>
+      {property.want !== "Sell" && (
+        <>
+          <h2 className="h3">Property Perks</h2>
+          <div className="card property-detail rd-3">
+            <h3 className="h5">Rent Includes</h3>
+            <div className="grid grid-laptop-4 grid-tablet-2 center">
+              <div className="grid-item">
+                <i
+                  className={
+                    "material-icons " +
+                    (property.rentIncludes1 ? "c-success" : "c-danger")
+                  }
+                >
+                  {property.rentIncludes1 ? "check" : "close"}
+                </i>
+                Electricity Bill
+              </div>
+              <div className="grid-item">
+                <i
+                  className={
+                    "material-icons " +
+                    (property.rentIncludes2 ? "c-success" : "c-danger")
+                  }
+                >
+                  {property.rentIncludes2 ? "check" : "close"}
+                </i>
+                Water Bill
+              </div>
+              <div className="grid-item">
+                <i
+                  className={
+                    "material-icons " +
+                    (property.rentIncludes3 ? "c-success" : "c-danger")
+                  }
+                >
+                  {property.rentIncludes3 ? "check" : "close"}
+                </i>
+                Parking Bill
+              </div>
+              <div className="grid-item">
+                <i
+                  className={
+                    "material-icons " +
+                    (property.rentIncludes4 ? "c-success" : "c-danger")
+                  }
+                >
+                  {property.rentIncludes4 ? "check" : "close"}
+                </i>
+                Maintenance Bill
+              </div>
+            </div>
+            <h3 className="h5">Property Perks</h3>
+            <div className="grid grid-laptop-5 grid-tablet-3 center">
+              <div className="grid-item">
+                <i
+                  className={
+                    "material-icons " +
+                    (property.propertyPerks1 ? "c-success" : "c-danger")
+                  }
+                >
+                  {property.propertyPerks1 ? "check" : "close"}
+                </i>
+                Inverter
+              </div>
+              <div className="grid-item">
+                <i
+                  className={
+                    "material-icons " +
+                    (property.propertyPerks2 ? "c-success" : "c-danger")
+                  }
+                >
+                  {property.propertyPerks2 ? "check" : "close"}
+                </i>
+                A.C.
+              </div>
+              <div className="grid-item">
+                <i
+                  className={
+                    "material-icons " +
+                    (property.propertyPerks3 ? "c-success" : "c-danger")
+                  }
+                >
+                  {property.propertyPerks3 ? "check" : "close"}
+                </i>
+                T.V.
+              </div>
+              <div className="grid-item">
+                <i
+                  className={
+                    "material-icons " +
+                    (property.propertyPerks4 ? "c-success" : "c-danger")
+                  }
+                >
+                  {property.propertyPerks4 ? "check" : "close"}
+                </i>
+                Water Purifier
+              </div>
+              <div className="grid-item">
+                <i
+                  className={
+                    "material-icons " +
+                    (property.propertyPerks5 ? "c-success" : "c-danger")
+                  }
+                >
+                  {property.propertyPerks5 ? "check" : "close"}
+                </i>
+                Cooler
+              </div>
+              <div className="grid-item">
+                <i
+                  className={
+                    "material-icons " +
+                    (property.propertyPerks6 ? "c-success" : "c-danger")
+                  }
+                >
+                  {property.propertyPerks6 ? "check" : "close"}
+                </i>
+                Fan
+              </div>
+              <div className="grid-item">
+                <i
+                  className={
+                    "material-icons " +
+                    (property.propertyPerks7 ? "c-success" : "c-danger")
+                  }
+                >
+                  {property.propertyPerks7 ? "check" : "close"}
+                </i>
+                Light
+              </div>
+              <div className="grid-item">
+                <i
+                  className={
+                    "material-icons " +
+                    (property.propertyPerks8 ? "c-success" : "c-danger")
+                  }
+                >
+                  {property.propertyPerks8 ? "check" : "close"}
+                </i>
+                Refrigerator
+              </div>
+              <div className="grid-item">
+                <i
+                  className={
+                    "material-icons " +
+                    (property.propertyPerks9 ? "c-success" : "c-danger")
+                  }
+                >
+                  {property.propertyPerks9 ? "check" : "close"}
+                </i>
+                Table
+              </div>
+              <div className="grid-item">
+                <i
+                  className={
+                    "material-icons " +
+                    (property.propertyPerks10 ? "c-success" : "c-danger")
+                  }
+                >
+                  {property.propertyPerks10 ? "check" : "close"}
+                </i>
+                Chair
+              </div>
+              <div className="grid-item">
+                <i
+                  className={
+                    "material-icons " +
+                    (property.propertyPerks11 ? "c-success" : "c-danger")
+                  }
+                >
+                  {property.propertyPerks11 ? "check" : "close"}
+                </i>
+                Cupboard
+              </div>
+            </div>
+          </div>
+        </>
+      )}
       <h2 className="h3">Address</h2>
       <div className="card property-detail rd-3">
         <p>{property.city}</p>
