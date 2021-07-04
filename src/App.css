@@ -653,6 +653,25 @@ section {
   height: 150px;
 }
 
+.top-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  align-items: flex-start;
+}
+.property h2 {
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.property-detail {
+  padding: 20px;
+}
+
+.property .grid-item {
+  padding: 40px 20px;
+}
+
 /* responsive */
 .menu-toggle {
   display: none;

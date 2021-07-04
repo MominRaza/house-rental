@@ -34,7 +34,7 @@ class Result extends Component {
         <div className="ts-wraper">
           <div className="list-item price">
             <div className="ts-wraper">
-              <p className="price h6">{property["price"]}</p>
+              <p className="price h6">₹ {property["price"]}</p>
             </div>
           </div>
           <p className="type">

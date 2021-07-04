@@ -60,22 +60,24 @@ export default function Property() {
 
   return (
     <section className="property">
-      <h1 className="h3">
-        <b>{property["propertyType"]}</b>
-        <span>
-          {" "}
-          for {property["want"]} in {property["city"]}
-        </span>
-      </h1>
-      <button
-        className="btn btn-t danger"
-        onClick={handleFavotite}
-        disabled={isLoading}
-      >
-        <i className="material-icons">
-          {isFavorite ? "favorite" : "favorite_outline"}
-        </i>
-      </button>
+      <div className="top-header">
+        <h1 className="h4">
+          <b>{property["propertyType"]}</b>
+          <span>
+            {" "}
+            for {property["want"]} in {property["city"]}
+          </span>
+        </h1>
+        <button
+          className="btn btn-t danger"
+          onClick={handleFavotite}
+          disabled={isLoading}
+        >
+          <i className="material-icons">
+            {isFavorite ? "favorite" : "favorite_outline"}
+          </i>
+        </button>
+      </div>
       {property.imageUrls && (
         <div className="card property-image">
           <div className="main-image">
@@ -98,8 +100,54 @@ export default function Property() {
           </div>
         </div>
       )}
+
+      <h2 className="h3">Property details</h2>
+      <div className="card property-detail rd-3 grid grid-laptop-3 grid-tablet-2 center">
+        <div className="grid-item">
+          <h3 className="h5">House Features</h3>
+          {property.bhk}{" "}
+          {parseInt(property.balcony)
+            ? " with "
+            : parseInt(property.bathroom)
+            ? " with "
+            : ""}
+          {property.balcony === "0" ? "" : property.balcony + " Balcony"}
+          {parseInt(property.balcony)
+            ? parseInt(property.bathroom)
+              ? " and "
+              : ""
+            : ""}
+          {property.bathroom === "0" ? "" : property.bathroom + " Bathroom"}
+        </div>
+        <div className="grid-item">
+          <h3 className="h5">Property Purpose</h3>
+          <p>{property.propertyPurpose}</p>
+        </div>
+        <div className="grid-item">
+          <h3 className="h5">Property type</h3>
+          <p>{property.propertyType}</p>
+        </div>
+        <div className="grid-item">
+          <h3 className="h5">Construction Status</h3>
+          <p>{property.constructionStatus}</p>
+        </div>
+        <div className="grid-item">
+          <h3 className="h5">Parking</h3>
+          <p>{property.parking}</p>
+        </div>
+        <div className="grid-item">
+          <h3 className="h5">Furnish Type</h3>
+          <p>{property.furnishType}</p>
+        </div>
+        <div className="grid-item">
+          <h3 className="h5">Area</h3>
+          <p>{property.area} Sq-ft</p>
+        </div>
+      </div>
+      <h2 className="h3">Property Perks</h2>
+      <div className="card property-detail rd-3"></div>
       <h2 className="h3">Address</h2>
-      <div className="card">
+      <div className="card property-detail rd-3">
         <p>{property.city}</p>
         <p>{property.locality}</p>
         <p>{property.fflat}</p>
@@ -107,10 +155,20 @@ export default function Property() {
           {property.floor} / {property.totalFloor}
         </p>
         <p>{property.building}</p>
+        <div className="map">
+          <iframe
+            title="Google Map"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d113525.16554900429!2d85.93170977987533!3d27.229777919537003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb8ca1c134290d%3A0x53a3e8776d17b360!2sHotel%20Sindhuli%20Inn!5e0!3m2!1sen!2sin!4v1625413110647!5m2!1sen!2sin"
+            width="500"
+            height="320"
+            allowfullscreen=""
+            loading="lazy"
+          ></iframe>
+        </div>
       </div>
       <h2 className="h3">Book now</h2>
-      <div className="card">
-        <p>{property.price}</p>
+      <div className="card property-detail rd-3">
+        <p>₹ {property.price}</p>
         <p>{property.rentMode}</p>
         <p>{property.priceRange}</p>
         <p>{property.constructionStatus}</p>
@@ -134,15 +192,6 @@ export default function Property() {
             </a>
           </div>
         </div>
-      </div>
-      <h2 className="h3">Property details</h2>
-      <div className="card">
-        {property.bhk} with {property.balcony} Balcony and {property.bathroom}{" "}
-        Bathroom
-        <p>{property.propertyPurpose}</p>
-        <p>{property.parking}</p>
-        <p>{property.furnishType}</p>
-        <p>{property.area} Sq-ft</p>
       </div>
     </section>
   );
