@@ -832,4 +832,8 @@ section {
   .property .grid-item {
     padding: 20px;
   }
+
+  .list-property .area {
+    display: block;
+  }
 }
