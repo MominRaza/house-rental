@@ -14,11 +14,11 @@ export default function LoginForm() {
 
   useEffect(() => {
     if (hash === "#/favourites") {
-      setInfo("First login to add items to your favourites list.");
+      setInfo("Login before adding items to your favourites list.");
     } else if (hash === "#/list-property") {
-      setInfo("First login to list your property.");
+      setInfo("To list your property first login.");
     } else if (hash === "#/tenant-verification") {
-      setInfo("First login to verify a tenant.");
+      setInfo("Please login before verifying tenant.");
     } else {
       setInfo("");
     }

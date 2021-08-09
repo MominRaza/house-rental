@@ -423,7 +423,7 @@ function Basic(props) {
         <label>
           <input
             className="area"
-            type="text"
+            type="number"
             name="area"
             placeholder="Area of property"
             onChange={(e) => setArea(e.target.value)}
