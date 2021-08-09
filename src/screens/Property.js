@@ -11,6 +11,7 @@ export default function Property() {
   const match = matchPath(useLocation().pathname, { path: "/property/:id" });
   const [property, setProperty] = useState([]);
   const [imageUrl, setImageUrl] = useState("");
+  const [video, setVideo] = useState(true);
   const history = useHistory();
 
   const { addToFavourites, removeFromFavourites, user } = useAuth();
@@ -50,6 +51,7 @@ export default function Property() {
   };
 
   function handleImageChange(url) {
+    setVideo(false);
     setImageUrl(url);
   }
 
@@ -81,14 +83,22 @@ export default function Property() {
       {property.imageUrls && (
         <div className="card property-image">
           <div className="main-image">
-            {property.videoUrl.length ? (
-              <p>{property.videoUrl}</p>
+            {video && property.videoUrl.length ? (
+              <video src={property.videoUrl[0].url} controls />
             ) : (
               <img src={imageUrl || property.imageUrls[0].url} alt="" />
             )}
           </div>
           <div className="all-images">
-            {property.videoUrl.length !== 0 && <p>{property.videoUrl}</p>}
+            {property.videoUrl.length !== 0 && (
+              <div>
+                <video
+                  src={property.videoUrl[0].url}
+                  onClick={() => setVideo(true)}
+                />
+                <i className="material-icons md-36">play_circle</i>
+              </div>
+            )}
             {property.imageUrls.map((image) => (
               <img
                 key={image.url}

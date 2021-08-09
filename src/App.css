@@ -637,7 +637,9 @@ section {
   text-align: center;
   margin-right: 10px;
 }
-.property-image .main-image img {
+.property-image .main-image img,
+.property-image .main-image video {
+  width: 100%;
   max-width: 100%;
   max-height: 70vh;
 }
@@ -648,11 +650,21 @@ section {
   overflow-y: auto;
   text-align: center;
 }
-.property-image .all-images img {
+.property-image .all-images img,
+.property-image .all-images video {
   width: 200px;
   height: 150px;
 }
-
+.property-image .all-images div {
+  position: relative;
+}
+.property-image .all-images .material-icons {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgba(0, 0, 0, 0.6);
+}
 .top-header {
   display: flex;
   justify-content: space-between;
