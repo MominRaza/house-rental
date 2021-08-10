@@ -29,11 +29,13 @@ import EcoManagement from "./screens/ecoManagement";
 import { AuthProvider } from "./hooks/AuthContext";
 import User from "./screens/user/User";
 import Property from "./screens/Property";
+import ScrollToTop from "./ScrollToTop";
 
 class App extends Component {
   render() {
     return (
       <Router>
+        <ScrollToTop />
         <AuthProvider>
           <Switch>
             <Route exact path="/" component={HomeHeader} />
