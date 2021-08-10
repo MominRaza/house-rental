@@ -28,7 +28,7 @@ export default function Favourites() {
         {
           // eslint-disable-next-line
           properties.map((property) => {
-            if (user.favourites.includes(property.id)) {
+            if (user.favourites && user.favourites.includes(property.id)) {
               return <Result key={property["id"]} property={property} />;
             }
           })
