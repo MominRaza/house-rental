@@ -89,8 +89,13 @@ export default function Result({ property }) {
           {property["bhk"]} - {property["constructionStatus"]}
         </p>
         <p className="details">
-          {property["details"]}
-          <Link to={"/property/" + property["id"]}>Read more</Link>
+          <Link
+            to={"/property/" + property["id"]}
+            class="btn btn-o primary icon-l"
+          >
+            <i class="material-icons md-18">unfold_more</i>
+            Read more
+          </Link>
         </p>
         <div className="list-item user-details">
           <div className="leading">
