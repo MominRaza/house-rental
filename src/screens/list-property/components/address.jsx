@@ -31,7 +31,7 @@ function Address(props) {
           });
           history.push("/list-property/photos-videos");
         } else {
-          setError("floar should be less than or equal to total Floor!");
+          setError("Floor should be less than or equal to total floor!");
         }
       }}
     >
